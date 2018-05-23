@@ -6,9 +6,46 @@ permalink: /about/
 
 Game engines, languages, optimization, simulation, graphics, handmade design.  
 
-Working on [Exile](https://github.com/TheNumbat/exile). 
-
 [Résumé](assets/resume.pdf)
+
+### Projects
+
+#### Exile
+
+[GitHub](https://github.com/TheNumbat/exile)
+
+A handmade-style voxel engine & game.
+
+Objective is to create a featureful low-level programming environment & voxel game engine with minimal libraries, to dig into and perfect critical and noncritical systems, and to create a modded-minecraft-like game on top of the engine.
+
+Goals:
+	- High quality graphics (lighting, render distance, fast movement, large worlds)
+	- Interesting and variable procedural terrain & feature generation
+	- Powerful & complex player-managed systems (e.g. modded minecraft/factorio)
+	- Smooth multiplayer and efficient servers
+	- Flexible & powerful modding support
+
+#### 3D-Grapher
+
+[GitHub](https://github.com/TheNumbat/3D-Grapher)
+
+A visualization tool for graphing 3D functions made for studying calculus III.
+
+Download the latest release [here](https://github.com/TheNumbat/3D-Grapher/releases).  
+
+#### C++ Course
+
+[GitHub](https://github.com/TheNumbat/cpp-course)
+
+Online curriculum for the programming courses I have taught, including notes, exercises, projects, syllabi, etc.
+
+[Link](https://thenumbat.github.io/cpp-course)
+
+#### Lists
+
+[GitHub](https://github.com/TheNumbat/Lists)
+
+Curated articles from around the web focusing on anything programming and tech.
 
 ### Contact
 
