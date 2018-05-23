@@ -5,8 +5,11 @@ permalink: /about/
 ---
 
 Game engines, languages, optimization, simulation, graphics, handmade design.  
-CMU SCS 2022.  
 
-### Contact me
+Working on [Exile](https://github.com/TheNumbat/exile). 
+
+[Résumé]({{ site.baseurl }}/_assets/resume.pdf)
+
+### Contact
 
 [mjslater@andrew.cmu.edu](mailto:mjslater@andrew.cmu.edu)
