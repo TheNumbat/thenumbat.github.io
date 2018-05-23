@@ -8,7 +8,7 @@ Game engines, languages, optimization, simulation, graphics, handmade design.
 
 Working on [Exile](https://github.com/TheNumbat/exile). 
 
-[Résumé]({{ site.baseurl }}/_assets/resume.pdf)
+[Résumé](/_assets/resume.pdf)
 
 ### Contact
 
