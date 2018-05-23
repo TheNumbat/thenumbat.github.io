@@ -27,13 +27,13 @@ Goals:
 
 ### 3D-Grapher
 
-[GitHub](https://github.com/TheNumbat/3D-Grapher) | [Download](https://github.com/TheNumbat/3D-Grapher/releases)
+[GitHub](https://github.com/TheNumbat/3D-Grapher) \| [Download](https://github.com/TheNumbat/3D-Grapher/releases)
 
 A visualization tool for graphing 3D functions made for studying calculus III.
 
 ### C++ Course
 
-[GitHub](https://github.com/TheNumbat/cpp-course) | [Website](https://thenumbat.github.io/cpp-course)
+[GitHub](https://github.com/TheNumbat/cpp-course) \| [Website](https://thenumbat.github.io/cpp-course)
 
 Online curriculum for the programming courses I have taught, including notes, exercises, projects, syllabi, etc.
 
