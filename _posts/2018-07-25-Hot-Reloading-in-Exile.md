@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Code Reloading in Exile
-draft: true
 ---
 
 In game development, one of the main draws of implementing game logic in a scripting language like Lua is the convenient ability to make changes to the source, reload the logic on the fly, and test the changes without restarting the game. A similar technique is also often used to refresh shader programs, asset files, and the like. 
