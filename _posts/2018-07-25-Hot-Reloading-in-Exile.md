@@ -8,9 +8,9 @@ In game development, one of the main draws of implementing game logic in a scrip
 
 However, supporting a secondary scripting language&mdash;or using one from the start&mdash;is not the only way to implement such a system. While rather more complicated, implementing the ability to reload code on a binary level allows one to make potentially deep changes to the entire source and have them appear instantly. Further, any language that can export C ABI compatible functions can be dynamically loaded in this manner, using good old-fashioned dynamic link libraries/shared objects. 
 
-I used this technique to implement hot-reloading the full C++ source of [Exile](https://github.com/TheNumbat/exile). The system provides many benefits, such as fast and convenient gameplay iteration, a clear platform-specific code boundary, and centralized state, but it has required working around several caveats.
+I used this technique to implement hot-reloading the full C++ source of [Exile](https://github.com/TheNumbat/exile). The system provides many benefits, such as fast and convenient gameplay iteration, a clear platform-specific code boundary, and centralized state. This post focuses on the several caveats one must work around, but I have still found maintaining the system to be worthwhile and educational.
 
-<video src="../assets/reload.mp4" preload autoplay muted loop video style="max-width: 100%; margin: 0 auto;"></video>
+<video src="../assets/reload.mp4" preload autoplay muted loop style="max-width: 100%; margin: 0 auto;"></video>
 
 ## Structure
 
@@ -132,24 +132,97 @@ Either way, one still can't depend on global or static variables having persiste
 
 In exile, I chose the second approach, as it meshed well with my platform abstraction approach: passing a structure of platform abstracted function pointers from the main executable to the (platform-agnostic) library. However, the first option provides more flexibility and potentially more performance, as one can choose an allocator tuned for their use case (including profiling features), and each allocate/free does not have to go through a pointer indirection. For these reasons, I intend to switch exile's approach in the future.
 
----
+## Threads
 
-Outline
-- Caveats
-- Fixing caveats
-- Other methods
+When the library is unloaded, threads it created are not terminated. This is not good: the memory for each thread's stack frame and any thread-local storage is associated with the library, and is invalidated when it is freed! Because of this, if our library creates threads, they must be terminated and restarted before and after each dynamic reload. To implement this we can simply add ``begin_reload`` and ``end_reload`` functions to our library API and call them from the main executable appropriately. Unfortunately, this does mean that each thread must complete the currently running (atomic) task before the reload can take place, leading to possible slowdowns when reloading.
 
-Pros:
-- Totally decoupled platform abstraction
-Cons:
-- Memory must be allocated outside dll
-    - No globals/statics
-- Threads have to be restarted
-- No virtual functions
-    - Hacky function pointers
-- No memory layout changes of existing objects (needs serialization)
+## Function Pointers
 
-Other Methods:
-    Serialize/deserialize everything
-    Binary patching - fixes most of these issues, but much more complicated Live++
-    JIT languages
+Persistently storing function pointers significantly limits the type of changes that can be reloaded successfully. This is because if the patched library contains new, different, or less functions than the previous version, their relative locations in its address space may change. And that means that previously stored function pointers are invalidated. On the other hand, taking addresses of functions on a per-frame basis, for example, passing a function to a generic sort, always works correctly, because the new function address is already patched into the code.   
+
+There are another two ways to fix this:
+1. Don't use persistent function pointers.
+2. Store pointers only to exported functions in conjunction with their name. Reload them when the library is reloaded.
+
+The first option is viable, and forces one to limit "virtual" indirection, but in exile, I decided to use the second option. This is because I thought the flexibility and extensibility of function pointers, especially for a future modding API, was worth the extra indirection. To implement the second option, exile stores function pointers as typed callable objects referencing a global table of raw address-and-name pairs. When the library is reloaded, the engine simply reloads each function from itself. Still, without much more invasive patching, C++ virtual functions cannot be used on objects that persist between reloads.
+
+Simplified implementation:
+
+```c++
+struct _FPTR {
+    void* func;
+    string name;
+};
+
+struct func_ptr_state {
+
+    _FPTR all_ptrs[128];
+    u32 num_ptrs = 0;
+};
+
+template<typename T, typename... args>
+struct func_ptr {
+
+    func_ptr(_FPTR* d = null) {data = d;}
+
+    T operator()(args... arg) {
+
+        return ((T(*)(args...))data->func)(arg...);
+    }
+
+    _FPTR* data = null;
+};
+
+static func_ptr_state* global_func = null;
+
+_FPTR* get_func_ptr(void* func, string name) {
+
+    for(u32 i = 0; i < global_func->num_ptrs; i++) {
+        if(global_func->all_ptrs[i].func == func)  {
+            return &global_func->all_ptrs[i];
+        }
+    }
+
+    u32 idx = global_func->num_ptrs;
+    global_func->num_ptrs++;
+
+    global_func->all_ptrs[idx].func = func;
+    global_func->all_ptrs[idx].name = name;
+
+    return &global_func->all_ptrs[idx];
+}
+
+void reload_func_ptrs() { 
+
+    for(u32 i = 0; i < num_ptrs; i++) {
+        get_proc_address(&all_ptrs[i].func, this_dll, all_ptrs[i].name);
+    }
+}
+```
+
+Usage:
+
+```c++
+extern "C" __declspec(dllexport) int func(int i) {
+    return i + 1;
+}
+
+int main() {
+
+    func_ptr<int, int> ptr(get_func_ptr(func, "func"));
+
+    int ret = ptr(5);
+
+    return 0;
+}
+```
+
+## Struct Layouts
+
+The last limitation of simple binary reloading is the most difficult to resolve: the conflict between old data and new code that expects a different format. Issues of this nature can be triggered whenever a reload changes the size of a structure&mdash;for example, a previously allocated array of those structures is now all out of alignment, leading to difficult-to-debug crashes. In exile, I've chosen to live with this limitation: reloading is, mostly, most of the time, primarily useful for tweaking existing code without the need to alter data structures. However, if an in-memory update is every truly needed, code to migrate the memory to a new format can just be dynamically patched in and run on reload.
+
+Solving this problem in a general fashion involves serializing all persistent state on unload, and deserializing it into the new format on load. This is achievable using the reflection framework I have also implemented in exile (future post), but I have not found it necessary as of yet.
+
+## Self-Modifying Code
+
+This framework for dynamically reloading C++ can be straightforward to implement, but has a few significant limitations. A more complex method of live binary patching&mdash;without reloading&mdash;such as used in [Live++](https://molecular-matters.com/products_livepp.html), combined with full serialization, could solve all of the problems, but is not so trivial to implement oneself. 
