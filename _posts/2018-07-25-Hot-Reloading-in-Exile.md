@@ -195,7 +195,7 @@ _FPTR* get_func_ptr(void* func, string name) {
 void reload_func_ptrs() { 
 
     for(u32 i = 0; i < num_ptrs; i++) {
-        get_proc_address(&all_ptrs[i].func, this_dll, all_ptrs[i].name);
+        get_proc_address(&global_func->all_ptrs[i].func, this_dll, global_func->all_ptrs[i].name);
     }
 }
 ```
