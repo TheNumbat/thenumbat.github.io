@@ -192,7 +192,7 @@ _FPTR* get_func_ptr(void* func, string name) {
     return &global_func->all_ptrs[idx];
 }
 
-void reload_func_ptrs() { 
+void reload_func_ptrs(platform_dll this_dll) { 
 
     for(u32 i = 0; i < num_ptrs; i++) {
         get_proc_address(&global_func->all_ptrs[i].func, this_dll, global_func->all_ptrs[i].name);
