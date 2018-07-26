@@ -13,6 +13,11 @@
 /* BASE RULES */
 /**************/
 
+video {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
 html {
   font-size: 100%;
 }
