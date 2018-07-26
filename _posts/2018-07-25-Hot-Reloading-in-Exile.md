@@ -10,7 +10,7 @@ However, supporting a secondary scripting language&mdash;or using one from the s
 
 I used this technique to implement hot-reloading the full C++ source of [Exile](https://github.com/TheNumbat/exile). The system provides many benefits, but also required conforming to several caveats.
 
-<video src="assets/reload.mp4" preload></video>
+<video src="../assets/reload.mp4" preload></video>
 
 ## Structure
 
@@ -29,24 +29,24 @@ For example, on windows, the library API would be written as such:
 
 extern "C" {
 
-	__declspec(dllexport) void* start_up(platform_api* api) {
+    __declspec(dllexport) void* start_up(platform_api* api) {
 
-		// allocate/initialize state...
+        // allocate/initialize state...
 
-		return state;
-	}
+        return state;
+    }
 
-	__declspec(dllexport) bool main_loop(engine* state) {
+    __declspec(dllexport) bool main_loop(engine* state) {
 
-		// run frame...
+        // run frame...
 
-		return state->is_running;
-	}
+        return state->is_running;
+    }
 
-	__declspec(dllexport) void shut_down(engine* state) {
+    __declspec(dllexport) void shut_down(engine* state) {
 
-		// destroy/free state...
-	}
+        // destroy/free state...
+    }
 }
 ```
 
@@ -69,49 +69,52 @@ shut_down_t shut_down;
 
 void load_library() {
 
-	library = LoadLibrary("path/to/game.dll");
+    library = LoadLibrary("path/to/game.dll");
 
-	start_up  = GetProcAddress(library, "start_up");
-	main_loop = GetProcAddress(library, "main_loop");
-	shut_down = GetProcAddress(library, "shut_down");
+    start_up  = GetProcAddress(library, "start_up");
+    main_loop = GetProcAddress(library, "main_loop");
+    shut_down = GetProcAddress(library, "shut_down");
 }
 
 void free_library() {
 
-	FreeLibrary(library);
-	start_up = main_loop = shut_down = nullptr;
+    FreeLibrary(library);
+    start_up = main_loop = shut_down = nullptr;
 }
 
 int main() {
 
-	load_library();
+    load_library();
 
-	platform_api api;
+    platform_api api;
 
-	void* state = start_up(&api);
+    void* state = start_up(&api);
 
-	WIN32_FILE_ATTRIBUTE_DATA attribs;
-	GetFileAttributesEx("path/to/game.dll", GetFileExInfoStandard, &attribs);
-	
-	while(main_loop(state)) {
+    WIN32_FILE_ATTRIBUTE_DATA attribs;
+    GetFileAttributesEx("path/to/game.dll", GetFileExInfoStandard,
+                        &attribs);
+    
+    while(main_loop(state)) {
 
-		WIN32_FILE_ATTRIBUTE_DATA new_attribs;
-		GetFileAttributesEx("path/to/game.dll", GetFileExInfoStandard, &new_attribs);
-		
-		if(CompareFileTime(attribs.ftLastWriteTime, new_attribs.ftLastWriteTime) == -1) {
+        WIN32_FILE_ATTRIBUTE_DATA new_attribs;
+        GetFileAttributesEx("path/to/game.dll", GetFileExInfoStandard,
+                            &new_attribs);
+        
+        if(CompareFileTime(attribs.ftLastWriteTime, 
+                           new_attribs.ftLastWriteTime) == -1) {
 
-			free_library();
-			load_library();
-		}
+            free_library();
+            load_library();
+        }
 
-		attribs = new_attribs;
-	}
+        attribs = new_attribs;
+    }
 
-	shut_down(state);
+    shut_down(state);
 
-	free_library();
+    free_library();
 
-	return 0;
+    return 0;
 }
 ```
 
@@ -140,13 +143,13 @@ Pros:
 - Totally decoupled platform abstraction
 Cons:
 - Memory must be allocated outside dll
-	- No globals/statics
+    - No globals/statics
 - Threads have to be restarted
 - No virtual functions
-	- Hacky function pointers
+    - Hacky function pointers
 - No memory layout changes of existing objects (needs serialization)
 
 Other Methods:
-	Serialize/deserialize everything
-	Binary patching - fixes most of these issues, but much more complicated Live++
-	JIT languages
+    Serialize/deserialize everything
+    Binary patching - fixes most of these issues, but much more complicated Live++
+    JIT languages
