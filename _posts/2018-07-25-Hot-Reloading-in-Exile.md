@@ -10,9 +10,9 @@ However, supporting a secondary scripting language&mdash;or using one from the s
 
 I used this technique to implement hot-reloading the full C++ source of [Exile](https://github.com/TheNumbat/exile). The system provides many benefits, but also required conforming to several caveats.
 
-<video><source src="assets/exilereload.mp4" type="video/mp4"></video>
+<video src="assets/exilereload.mp4" width="320" height="200" preload></video>
 
-### Structure
+## Structure
 
 The actual implementation in [Exile](https://github.com/TheNumbat/exile) is somewhat more complicated than described here, due to supporting multiple platforms and solving several caveats. This post intends to present the basic structure of the technique.
 
@@ -117,7 +117,7 @@ int main() {
 
 And voilà! You have hot reloading...in principle. The benefits are numerous: fast and convenient gameplay iteration, a clear platform-specific code boundary, and centralized state, for example. While this structure is all that is needed to support swapping out old and new code, there are several more problems to solve.
 
-### Memory
+## Memory
 
 If you're familiar with the semantics of loading/freeing dynamic library objects, you may be concerned about what happens to memory allocated by our library when we reload it&mdash;it disappears. When a library is unloaded, its memory is removed from the address space of the process that loaded it. This means that we can't depend on any library-owned memory, including both globals/statics and heap allocations.
 
