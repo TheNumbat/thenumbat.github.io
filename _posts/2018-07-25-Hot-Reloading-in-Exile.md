@@ -10,7 +10,7 @@ However, supporting a secondary scripting language&mdash;or using one from the s
 
 I used this technique to implement hot-reloading the full C++ source of [Exile](https://github.com/TheNumbat/exile). The system provides many benefits, such as fast and convenient gameplay iteration, a clear platform-specific code boundary, and centralized state, but it has required working around several caveats.
 
-<video src="../assets/reload.mp4" preload autoplay muted loop></video>
+<video src="../assets/reload.mp4" preload autoplay muted loop video style="max-width: 100%; margin: 0 auto;"></video>
 
 ## Structure
 
