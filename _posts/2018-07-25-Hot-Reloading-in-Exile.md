@@ -10,7 +10,7 @@ However, supporting a secondary scripting language&mdash;or using one from the s
 
 I used this technique to implement hot-reloading the full C++ source of [Exile](https://github.com/TheNumbat/exile). The system provides many benefits, but also required conforming to several caveats.
 
-<video src="assets/exilereload.mp4" width="320" height="200" preload></video>
+<video src="assets/reload.mp4" width="320" height="200" preload></video>
 
 ## Structure
 
