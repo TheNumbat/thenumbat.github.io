@@ -8,7 +8,7 @@ In game development, one of the main draws of implementing game logic in a scrip
 
 However, supporting a secondary scripting language&mdash;or using one from the start&mdash;is not the only way to implement such a system. While rather more complicated, implementing the ability to reload code on a binary level allows one to make potentially deep changes to the entire source and have them appear instantly. Further, any language that can export C ABI compatible functions can be dynamically loaded in this manner, using good old-fashioned dynamic link libraries/shared objects. 
 
-I used this technique to implement hot-reloading the full C++ source of [Exile](https://github.com/TheNumbat/exile). The system provides many benefits, such as fast and convenient gameplay iteration, a clear platform-specific code boundary, and centralized state. This post focuses on the several caveats one must work around, but I have still found maintaining the system to be worthwhile and educational.
+I used this technique to implement hot-reloading the full C++ source of [Exile](https://github.com/TheNumbat/exile). The system provides many benefits, such as fast and convenient gameplay iteration, a clear platform-specific code boundary, and centralized state. This post focuses on the several caveats I had to work around, but I have still found maintaining the system to be worthwhile and educational.
 
 <video src="../assets/reload.mp4" preload autoplay muted loop style="max-width: 100%; margin: 0 auto;"></video>
 
