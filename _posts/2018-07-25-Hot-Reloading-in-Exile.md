@@ -8,13 +8,13 @@ In game development, one of the main draws of implementing game logic in a scrip
 
 However, supporting a secondary scripting language&mdash;or using one from the start&mdash;is not the only way to implement such a system. While rather more complicated, implementing the ability to reload code on a binary level allows one to make potentially deep changes to the entire source and have them appear instantly. Further, any language that can export C ABI compatible functions can be dynamically loaded in this manner, using good old-fashioned dynamic link libraries/shared objects. 
 
-I used this technique to implement hot-reloading the full C++ source of [Exile](https://github.com/TheNumbat/exile). The system provides many benefits, but also required conforming to several caveats.
+I used this technique to implement hot-reloading the full C++ source of [Exile](https://github.com/TheNumbat/exile). The system provides many benefits, such as fast and convenient gameplay iteration, a clear platform-specific code boundary, and centralized state, but it has required working around several caveats.
 
 <video src="../assets/reload.mp4" preload autoplay loop style="max-width: 960px; margin: 0 auto;"></video>
 
 ## Structure
 
-The actual implementation in [Exile](https://github.com/TheNumbat/exile) is somewhat more complicated than described here, due to supporting multiple platforms and solving several caveats. This post intends to present the basic structure of the technique.
+The actual implementation in [Exile](https://github.com/TheNumbat/exile) is somewhat more complicated than described here, due to supporting multiple platforms and solving the issues below. This post intends to present the basic structure of the technique.
 
 Running a re-loadable binary follows three basic steps:
 1. Load the dynamic code and its start-up, loop, and shut-down functions. Call start-up.
@@ -118,7 +118,7 @@ int main() {
 }
 ```
 
-And voilà! You have hot reloading...in principle. The benefits are numerous: fast and convenient gameplay iteration, a clear platform-specific code boundary, and centralized state, for example. While this structure is all that is needed to support swapping out old and new code, there are several more problems to solve.
+And voilà! You have hot reloading...in principle. While this structure is all that is needed to support swapping out old and new code, there are several more problems to solve.
 
 ## Memory
 
