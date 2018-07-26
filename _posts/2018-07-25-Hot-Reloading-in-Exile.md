@@ -130,7 +130,7 @@ Hence, there are two ways to access the heap in a persistent manner:
 
 Either way, one still can't depend on global or static variables having persistent values. This, at least, can be worked around in code.
 
-In exile, I chose the second approach, as it meshed well with my platform abstraction approach: passing a structure of platform abstracted function pointers from the main executable to the (platform-agnostic) library. However, the first option provides more flexibility and potentially more performance, as one can choose an allocator tuned for their use case (including profiling features), and each allocate/free does not have to go through a pointer indirection. For these reasons, I intend to switch exile's approach in the future.
+In exile, I chose the second option, as it meshed well with my platform abstraction approach: passing a structure of platform abstracted function pointers from the main executable to the (platform-agnostic) library. However, the first option provides more flexibility and potentially more performance, as one can choose an allocator tuned for their use case (including profiling features), and each allocate/free does not have to go through a pointer indirection. For these reasons, I intend to switch exile's approach in the future.
 
 ## Threads
 
