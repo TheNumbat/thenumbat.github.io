@@ -217,6 +217,10 @@ int main() {
 }
 ```
 
+## String Literals
+
+String literals are subject to the same limitations as function pointers: since they are stored in static memory (.rodata), their addresses may change when the library is reloaded. This is relatively easy to work around by not storing pointers to string literals. Instead, either initialize/pass the literals every frame, or make heap-allocated copies for storage.
+
 ## Struct Layouts
 
 The last limitation of simple binary reloading is the most difficult to resolve: the conflict between old data and new code that expects a different format. Issues of this nature can be triggered whenever a reload changes the size of a structure&mdash;for example, a previously allocated array of those structures is now all out of alignment, leading to difficult-to-debug crashes. In exile, I've chosen to live with this limitation: reloading is, mostly, most of the time, primarily useful for tweaking existing code without the need to alter data structures. However, if an in-memory update is every truly needed, code to migrate the memory to a new format can just be dynamically patched in and run on reload.
