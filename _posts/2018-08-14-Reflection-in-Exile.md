@@ -13,7 +13,7 @@ For [exile](https://github.com/TheNumbat/exile), I wanted to use run-time reflec
 ## Usage
 
 The end result allowed me to write code such as this, to print any structure:  
-<em>((Full Implementation)[https://github.com/TheNumbat/exile/blob/master/src/engine/ds/string.cpp#L282])</em>
+<em>([Full Implementation](https://github.com/TheNumbat/exile/blob/master/src/engine/ds/string.cpp#L282))</em>
 
 ```c++
 template<typename T>
@@ -67,7 +67,7 @@ outer{name : "Data!", data : inner{i : 10, f : 10.0}}
 ## Structure
 
 The reflection system relies on a global (thread-local) table that contains all type information. This is a simple hash map that maps from ``type_id`` to ``_type_info``, which is a discriminated union containing the type's size, name, type (that is, integer, floating point, pointer, structure, etc.), and associated information, such as member values and names.  
-<em>((Full Implementation)[https://github.com/TheNumbat/exile/blob/master/src/engine/util/type_table.h])</em>
+<em>([Full Implementation](https://github.com/TheNumbat/exile/blob/master/src/engine/util/type_table.h))</em>
 
 ```c++
 enum class Type : uint8_t {
@@ -182,7 +182,8 @@ Now, the type table isn't especially useful if you have to manually populate it 
 
 libclang is a C binding for LLVM's clang compiler frontend. While not as powerful as the full C++ interface in [libtooling](https://clang.llvm.org/docs/LibTooling.html) or plug-ins for clang itself, it provides enough access to the parsed and type-checked AST for this use case. (That is, except when dealing with deeply nested templates: I do not address this robustly, and I would advise one to write a plugin/clangtool for more control).
 
-The basic structure of the metaprogram is quite simple: use libclang to parse the C++ source, traverse the AST to pick out type definitions, and generate the code corresponding to each type. Several complications arise when dealing with dependent types (ordering) and instantiating templates (duplication/dependency), but for the basic case of ordered C-style structs, everything works intuitively.
+The basic structure of the metaprogram is quite simple: use libclang to parse the C++ source, traverse the AST to pick out type definitions, and generate the code corresponding to each type. Several complications arise when dealing with dependent types (ordering) and instantiating templates (duplication/dependency), but for the basic case of ordered C-style structs, everything works intuitively.  
+([Full Implementation](https://github.com/TheNumbat/exile/blob/master/src/tools/meta.cpp))
 
 ```c++
 auto index = clang_createIndex(0, 0);
