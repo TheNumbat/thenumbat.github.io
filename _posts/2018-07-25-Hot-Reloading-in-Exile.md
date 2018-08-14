@@ -20,7 +20,8 @@ Running a re-loadable binary follows three basic steps:
 2. Enter the main loop. Call loop. After each iteration, check if the library file has been overwritten. If so, reload the library and its control functions.
 3. On quit, call shut-down and unload the library.
 
-For example, on windows, the library API would be written as such:
+For example, on windows, the library API would be written as such:  
+<em>((Full Implementation)[https://github.com/TheNumbat/exile/blob/master/src/engine/engine.cpp])</em>
 
 ```c++
 
@@ -49,7 +50,8 @@ extern "C" {
 }
 ```
 
-And the main executable:
+And the main executable:  
+<em>((Full Implementation)[https://github.com/TheNumbat/exile/blob/master/src/engine/platform/platform_main.cpp])</em>
 
 ```c++
 
@@ -145,7 +147,8 @@ There are another two ways to fix this:
 
 The first option is viable, and forces one to limit "virtual" indirection, but in exile, I decided to use the second option. This is because I thought the flexibility and extensibility of function pointers, especially for a future modding API, was worth the extra indirection. To implement the second option, exile stores function pointers as typed callable objects referencing a global table of raw address-and-name pairs. When the library is reloaded, the engine simply reloads each function from itself. Still, without much more invasive patching, C++ virtual functions cannot be used on objects that persist between reloads.
 
-Simplified implementation:
+Simplified implementation:  
+<em>((Full Header)[https://github.com/TheNumbat/exile/blob/master/src/engine/util/fptr.h] | (Full Implementation)[https://github.com/TheNumbat/exile/blob/master/src/engine/util/fptr.cpp])</em>
 
 ```c++
 struct _FPTR {
