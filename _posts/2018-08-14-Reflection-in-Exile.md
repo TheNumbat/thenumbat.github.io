@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Code Reloading in Exile
+title: Reflection in Exile
 draft: true
 ---
 
@@ -19,27 +19,28 @@ The end result allowed me to write code such as this, to print any structure:
 template<typename T>
 void print_struct(T value) { 
 	
-	uint8_t* addr = &value;
-	_type_info* info = TYPEINFO(T);
+  uint8_t* addr = &value;
+  _type_info* info = TYPEINFO(T);
 
-	print(info->name);
+  print(info->name);
 	
-	print('{');
-	for(int i = 0; i < info->_struct.member_count; i++) {
+  print('{');
+  for(int i = 0; i < info->_struct.member_count; i++) {
 
-		print(info->_struct.member_names[i]);
-		print(" : ");
+    print(info->_struct.member_names[i]);
+    print(" : ");
 
-		uint8_t* member_addr = addr + info->_struct.member_offsets[i];
-		_type_info* member_type = TYPEINFO_H(info->_struct.member_types[i]);
+    uint8_t* member_addr = addr + info->_struct.member_offsets[i];
 
-		print_type(member_addr, member_type);
+    _type_info* member_type = TYPEINFO_H(info->_struct.member_types[i]);
 
-		if(i < info->_struct.member_count - 1) {
-			print(", ");
-		}
-	}
-	print('}');
+    print_type(member_addr, member_type);
+
+    if(i < info->_struct.member_count - 1) {
+      print(", ");
+    }
+  }
+  print('}');
 }
 ```
 Usage:
@@ -47,13 +48,13 @@ Usage:
 ```c++
 
 struct inner {
-	int i = 10;
-	float f = 10.0f;
+  int i = 10;
+  float f = 10.0f;
 };
 
 struct outer {
-	string name = "Data!";
-	inner data;
+  string name = "Data!";
+  inner data;
 };
 
 outer o;
@@ -73,43 +74,43 @@ The reflection system relies on a global (thread-local) table that contains all 
 
 ```c++
 enum class Type : uint8_t {
-	_void,
-	_int,
-	_float,
-	_ptr,
-	_struct,
-	// ...array, enum, etc...
+  _void,
+  _int,
+  _float,
+  _ptr,
+  _struct,
+  // ...array, enum, etc...
 };
 
 struct Type_void_info {};
 struct Type_int_info {
-	bool is_signed = false;
+  bool is_signed = false;
 };
 struct Type_float_info {};
 struct Type_bool_info {};
 struct Type_ptr_info {
-	type_id to = 0;
+  type_id to = 0;
 };
 struct Type_struct_info {
-	type_id		member_types[96]	= {};
-	string 		member_names[96];
-	uint32_t 	member_offsets[96]	= {};
-	uint8_t 	member_circular[96] = {};
-	uint32_t 	member_count		= 0;
+  type_id  member_types[96]    = {};
+  string   member_names[96];
+  uint32_t member_offsets[96]  = {};
+  uint8_t  member_circular[96] = {};
+  uint32_t member_count        = 0;
 };
 
 struct _type_info {
-	Type type_type 	= Type::_void;
-	uint64_t size 	= 0;
-	string name;
-	union {
-		Type_void_info	 _void;
-		Type_int_info    _int;
-		Type_float_info  _float;
-		Type_bool_info   _bool;
-		Type_ptr_info    _ptr;
-		Type_struct_info _struct;
-	};
+  Type type_type 	= Type::_void;
+  uint64_t size 	= 0;
+  string name;
+  union {
+    Type_void_info   _void;
+    Type_int_info    _int;
+    Type_float_info  _float;
+    Type_bool_info   _bool;
+    Type_ptr_info    _ptr;
+    Type_struct_info _struct;
+  };
 };
 ```
 
@@ -123,10 +124,10 @@ map<type_id,_type_info> type_table;
 template<typename T>
 struct _get_type_info { 
 	
-	static _type_info* get_type_info() {
+  static _type_info* get_type_info() {
 
-		return type_table.try_get(typeid(T).hash_code());
-	}
+    return type_table.try_get(typeid(T).hash_code());
+  }
 };
 
 #define TYPEINFO(...) _get_type_info< __VA_ARGS__ >::get_type_info()
@@ -142,23 +143,23 @@ Getting information for pointers is slightly more complicated: there's no limit 
 template<typename T>
 struct _get_type_info<T*> {
 
-	static _type_info* get_type_info() {
+  static _type_info* get_type_info() {
 
-		_type_info* info = type_table.try_get(typeid(T*).hash_code());
-		if(info) return info;
+    _type_info* info = type_table.try_get(typeid(T*).hash_code());
+    if(info) return info;
 
-		_type_info* to = TYPEINFO(T);
+    _type_info* to = TYPEINFO(T);
 
-		_type_info ptr_t;
+    _type_info ptr_t;
 		
-		ptr_t.type_type = Type::_ptr;
-		ptr_t.size 		= sizeof(T*);
-		ptr_t.name 		= to->name;
+    ptr_t.type_type = Type::_ptr;
+    ptr_t.size      = sizeof(T*);
+    ptr_t.name      = to->name;
 		
-		ptr_t._ptr.to 	= to->hash;
+    ptr_t._ptr.to   = to->hash;
 		
-		return type_table.insert(typeid(T*).hash_code(), ptr_t);
-	}
+    return type_table.insert(typeid(T*).hash_code(), ptr_t);
+  }
 };
 ```
 
