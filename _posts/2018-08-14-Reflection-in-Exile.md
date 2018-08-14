@@ -91,11 +91,10 @@ struct Type_ptr_info {
 	type_id to = 0;
 };
 struct Type_struct_info {
-	type_id		member_types[96]	= {};
-	string 		member_names[96];
-	uint32_t 	member_offsets[96]	= {};
-	uint8_t 	member_circular[96] = {};
-	uint32_t 	member_count		= 0;
+	string 		member_names[64];
+	type_id		member_types[64]   = {};
+	uint32_t 	member_offsets[64] = {};
+	uint32_t 	member_count       = 0;
 };
 
 struct _type_info {
@@ -177,7 +176,7 @@ Fully built out, along with some utility functions such as enum-stringification 
 ```c++
 ImGui::EditAny("settings", &settings);
 ```
-<img src="../assets/ui.png">
+<div style="text-align: center"><img src="../assets/ui.png"></div>
 
 ## Metaprogramming
 
