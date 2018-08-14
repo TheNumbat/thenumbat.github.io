@@ -24,7 +24,6 @@ For example, on windows, the library API would be written as such:
 <em>([Full Implementation](https://github.com/TheNumbat/exile/blob/master/src/engine/engine.cpp))</em>
 
 ```c++
-
 #include "platform_api.h"
 
 extern "C" {
@@ -54,7 +53,6 @@ And the main executable:
 <em>([Full Implementation](https://github.com/TheNumbat/exile/blob/master/src/engine/platform/platform_main.cpp))</em>
 
 ```c++
-
 #include <windows.h>
 #include "platform_api.h"
 

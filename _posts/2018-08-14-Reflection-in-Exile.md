@@ -183,7 +183,7 @@ Now, the type table isn't especially useful if you have to manually populate it 
 libclang is a C binding for LLVM's clang compiler frontend. While not as powerful as the full C++ interface in [libtooling](https://clang.llvm.org/docs/LibTooling.html) or plug-ins for clang itself, it provides enough access to the parsed and type-checked AST for this use case. (That is, except when dealing with deeply nested templates: I do not address this robustly, and I would advise one to write a plugin/clangtool for more control).
 
 The basic structure of the metaprogram is quite simple: use libclang to parse the C++ source, traverse the AST to pick out type definitions, and generate the code corresponding to each type. Several complications arise when dealing with dependent types (ordering) and instantiating templates (duplication/dependency), but for the basic case of ordered C-style structs, everything works intuitively.  
-([Full Implementation](https://github.com/TheNumbat/exile/blob/master/src/tools/meta.cpp))
+<em>([Full Implementation](https://github.com/TheNumbat/exile/blob/master/src/tools/meta.cpp))</em>
 
 ```c++
 auto index = clang_createIndex(0, 0);
