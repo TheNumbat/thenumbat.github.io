@@ -100,11 +100,11 @@ struct Type_struct_info {
 
 struct _type_info {
 	
-    Type type_type 	= Type::_void;
-    type_id hash;
+	Type type_type 	= Type::_void;
+	type_id hash;
 
-    uint64_t size   = 0;
-    string name;
+	uint64_t size   = 0;
+	string name;
 
 	union {
 		Type_void_info	 _void;
@@ -133,8 +133,11 @@ struct _get_type_info {
 	}
 };
 
-#define TYPEINFO(...) _get_type_info< __VA_ARGS__ >::get_type_info()    // get by compile-time type
-#define TYPEINFO_H(h) type_table.try_get(h)                             // get by hash
+// get by compile-time type
+#define TYPEINFO(...) _get_type_info< __VA_ARGS__ >::get_type_info()
+
+// get by hash
+#define TYPEINFO_H(h) type_table.try_get(h)
 ```
 
 Providing the ``TYPEINFO()`` syntax requires a bit of macro trickery via varargs to group incorrectly comma-delinated template types and a static member function that can be arbitrary specialized.
@@ -174,7 +177,7 @@ Fully built out, along with some utility functions such as enum-stringification 
 ```c++
 ImGui::EditAny("settings", &settings);
 ```
-<img src="../assets/ui.png" style="max-width: 75%; margin: 0 auto;">
+<img src="../assets/ui.png">
 
 ## Metaprogramming
 
