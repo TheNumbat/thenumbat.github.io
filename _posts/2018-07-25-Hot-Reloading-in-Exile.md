@@ -226,7 +226,7 @@ String literals are subject to the same limitations as function pointers: since 
 
 The last limitation of simple binary reloading is the most difficult to resolve: the conflict between old data and new code that expects a different format. Issues of this nature can be triggered whenever a reload changes the size of a structure&mdash;for example, a previously allocated array of those structures is now all out of alignment, leading to difficult-to-debug crashes. In exile, I've chosen to live with this limitation: reloading is, mostly, most of the time, primarily useful for tweaking existing code without the need to alter data structures. However, if an in-memory update is every truly needed, code to migrate the memory to a new format can just be dynamically patched in and run on reload.
 
-Solving this problem in a general fashion involves serializing all persistent state on unload, and deserializing it into the new format on load. This is achievable using the reflection framework I have also implemented in exile (future post), but I have not found it necessary as of yet.
+Solving this problem in a general fashion involves serializing all persistent state on unload, and deserializing it into the new format on load. This is achievable using the [reflection framework](https://thenumbat.github.io/Reflection-in-Exile/) I have also implemented in exile, but I have not found it necessary as of yet.
 
 ## Self-Modifying Code
 
