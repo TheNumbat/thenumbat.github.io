@@ -78,7 +78,7 @@ return 3 - side0 - side1 - corner;
 
 Finally, once the 0-3 occlusion value is calculated for each vertex, the fragment shader must use this value to blend and darken the result. To do so, the shader can use the 0-3 value as an index into a uniform occlusion curve, multiplying the fragment color by the specified occlusion factor. In Exile, the default curve is ``0.75, 0.825, 0.9, 1.0``. 
 
-However, simply assigning each vertex an occlusion value and interpolating between them will not produce the correct results over a quad: by default, the GPU will interpolate vertex attributes per triangle in barycentric coordinates. To get around this, we must specify the occlusion values of all four vertices in a face<em>for each vertex</em>. With this information, the fragment shader can interpolate the occlusion bi-linearly based on its texture u/v coordinates, correctly blending occlusion across the quad. 
+However, simply assigning each vertex an occlusion value and interpolating between them will not produce the correct results over a quad: by default, the GPU will interpolate vertex attributes per triangle in barycentric coordinates. To get around this, we must specify the occlusion values of all four vertices in a face <em>for each vertex</em>. With this information, the fragment shader can interpolate the occlusion bi-linearly based on its texture u/v coordinates, correctly blending occlusion across the quad. 
 
 <em>([Implementation](https://github.com/TheNumbat/exile/blob/master/src/world.cpp#L553))</em>
 
