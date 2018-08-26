@@ -174,7 +174,7 @@ Fully built out, along with some utility functions such as enum-stringification 
 ```c++
 ImGui::EditAny("cam", &camera);
 ```
-<div style="text-align: center"><img src="../assets/ui.png"></div>
+<div style="text-align: center;"><img src="../assets/ui.png"></div>
 
 ## Metaprogramming
 
