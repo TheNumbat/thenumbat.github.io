@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Voxel Rendering in Exile: Part 1
+title: Voxel Rendering in Exile, Part 1
 ---
 
 No, [Exile](https://github.com/TheNumbat/exile) is not technically a "voxel" engine. A real voxel engine unifies objects, textures, and more into colored voxel data, rendering them via raymarching/[marching cubes](https://en.wikipedia.org/wiki/Marching_cubes)/[dual contouring](https://upvoid.com/devblog/2013/05/terrain-engine-part-1-dual-contouring/)/etc., and can target realism. Instead, Exile is a "voxel" engine in that it's a traditional 3D engine that happens to focus on representing and drawing textured cubes (like Minecraft and related games). Some have worked around this linguistic confusion by christening the technique ["Swedish cubes"](https://yave.handmade.network/), but for the purposes of this post, please assume that voxels imply textured cubes.
