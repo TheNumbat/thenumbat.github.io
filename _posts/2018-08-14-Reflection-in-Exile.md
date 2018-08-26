@@ -188,7 +188,7 @@ The basic structure of the meta-program is quite simple: use libclang to parse t
 ```c++
 auto index = clang_createIndex(0, 0);
 auto unit = clang_parseTranslationUnit(index, "path/to/code", 0, 0,
-									   nullptr, 0, CXTranslationUnit_KeepGoing);
+                                       nullptr, 0, CXTranslationUnit_KeepGoing);
 
 auto cursor = clang_getTranslationUnitCursor(unit);
 
