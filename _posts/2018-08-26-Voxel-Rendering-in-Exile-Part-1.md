@@ -214,4 +214,4 @@ Finally, the fragment shader renders the rasterized results using the u/v/t text
 
 ## Next
 
-In the Voxel Rendering Part 2, I will cover the systems for custom block models, lighting, and animations. But first, look out for environment rendering and world interactivity!
+In Voxel Rendering Part 2, I will cover the systems for custom block models, lighting, and animations. But first, look out for environment rendering and world interactivity!
