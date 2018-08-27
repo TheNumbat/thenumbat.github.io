@@ -176,8 +176,6 @@ void main() {
 
 	gl_Position = mvp * vec4(v.pos, 1.0);
 	
-	vec3 m_pos = (m * vec4(v.pos, 1.0)).xyz;
-
 	f_n = cross(v2 - v1, v3 - v1);
 	f_uv = v.uv;
 	f_ao = v.ao;
