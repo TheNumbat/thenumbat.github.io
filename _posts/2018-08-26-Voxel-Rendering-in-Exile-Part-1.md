@@ -49,7 +49,7 @@ In developing Exile, I explored several techniques for rendering voxel data, and
 
 	Meshing also refers to several techniques. The basic idea is to generate a traditional 3D mesh from voxel data. Rendering static meshes is just about the fastest thing a GPU can do, so meshing tends to be the most performant approach&mdash;but can require unacceptable amounts of GPU memory. However, memory limitations may be worked around by using fixed-precision attributes. For example, if all vertices are at integer coodinates within a chunk, the coordinates only need enough bits to cover the size of the chunk&mdash;certainly not a 12-byte ``vec3``. Further, this approach can be combined with geometry shaders to render directly from an optimized mesh of per-face data rather than per-vertex data.
 
-I found the approach with the highest absolute performance to be meshing. However, due to memory and flexibility concerns, what I settled on for Exile is a hybrid meshing/geometry shading pipeline: generate an optimized face mesh for each chunk, then feed the mesh faces (each represented by four compact vertices) through shaders that unpack the vertices, assemble them into a quad, and render them. 
+I found the approach with the highest absolute performance to be meshing, settling on a meshing pipeline that works with compact quads: generate an optimized face mesh for each chunk, then feed the mesh faces (each represented by four compact vertices) through an instanced vertex shader that unpacks the vertices, assembles them into a quad, and passes them along to the fragment shader. 
 
 ## Meshing
 
