@@ -25,6 +25,13 @@ Goals:
    - Smooth multiplayer and efficient servers
    - Flexible & powerful modding support
 
+### Viz.ml
+
+[GitHub](https://github.com/TheNumbat/viz.ml) \| [Download](https://github.com/TheNumbat/viz.ml/releases)
+
+[HackCMU 2018] An interactive dimensionality reduction visualization engine for introspection of high dimensional data
+sets.
+
 ### 3D-Grapher
 
 [GitHub](https://github.com/TheNumbat/3D-Grapher) \| [Download](https://github.com/TheNumbat/3D-Grapher/releases)
