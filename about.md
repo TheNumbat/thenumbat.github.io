@@ -4,7 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Game engines, languages, optimization, simulation, graphics, handmade design.  
+CMU SCS 2022.
+Interested in computer graphics, game engines, simulation, algorithms, languages.  
 
 [Résumé](assets/resume.pdf)
 
@@ -14,41 +15,39 @@ Game engines, languages, optimization, simulation, graphics, handmade design.
 
 [GitHub](https://github.com/TheNumbat/exile)
 
-A handmade-style voxel engine & game.
+[Handmade](https://handmade.network/manifesto) from-scratch game engine including a modern OpenGL deferred renderer, parallel voxel world generation, multiple OS layers, a custom standard library, type introspection, debugging/profiling features, and more.
 
-Objective is to create a featureful low-level programming environment & voxel game engine with minimal libraries, to dig into and perfect critical and noncritical systems, and to create a modded-minecraft-like game on top of the engine.
-
-Goals:
-   - High quality graphics (lighting, render distance, fast movement, large worlds)
-   - Interesting and variable procedural terrain & feature generation
-   - Powerful & complex player-managed systems (e.g. modded minecraft/factorio)
-   - Smooth multiplayer and efficient servers
-   - Flexible & powerful modding support
+Broad goals:
+   - Professional quality graphics (dynamic lighting, large worlds, intricate systems)
+   - Interesting and variable procedural terrain/feature generation
+   - Powerful and complex player-managed systems (e.g. modded minecraft/factorio)
+   - Multi-player 
+   - Powerful modding support
 
 ### Viz.ml
 
 [GitHub](https://github.com/TheNumbat/viz.ml) \| [Download](https://github.com/TheNumbat/viz.ml/releases)
 
-[HackCMU 2018] An interactive dimensionality reduction visualization engine for introspection of high dimensional data
-sets.
+(HackCMU 2018)
+A dimensionality reduction and visualization tool for high dimensional data sets.
 
 ### 3D-Grapher
 
 [GitHub](https://github.com/TheNumbat/3D-Grapher) \| [Download](https://github.com/TheNumbat/3D-Grapher/releases)
 
-A visualization tool for graphing 3D functions made for studying calculus III.
+A visualization tool for the Davidson Academy multivariable calculus course.
 
 ### C++ Course
 
 [GitHub](https://github.com/TheNumbat/cpp-course) \| [Website](https://thenumbat.github.io/cpp-course)
 
-Online curriculum for the programming courses I have taught, including notes, exercises, projects, syllabi, etc.
+Developed website cataloging course curriculum from the electives I organized and taught course at the Davidson Academy.
 
 ### Lists
 
 [GitHub](https://github.com/TheNumbat/Lists)
 
-Curated articles from around the web focusing on anything programming and tech.
+Curated articles from around the web focusing on computer science/programming/tech.
 
 ## Contact
 
