@@ -234,6 +234,8 @@ Finally, when the reflection system starts up, it invokes the function output by
 
 ## Limitations
 
+*As of summer 2019 the meta-program was rewritten to robustly handle nested templates and circular dependencies.*
+
 My implementation of the meta-program with libclang is lacking in some areas: the way in which type information is stored prevents circularly dependent types from being output with correct dependencies. Similarly, it cannot decode deeply nested templates. A truly robust implementation would traverse (or rebuild) clang's representation of the type dependancy graph rather than operating directly from the C++ AST. I plan to upgrade the tool to use libtooling in the future, but the current state is adequate, as the limitations may be worked around. A further upgrade may involve outputting a generic data format that is parsed by the run-time library rather than outputting code that is compiled into the build.
 
 Further, this system does not reflect any OOP concepts such as methods, constructors/destructors, and inheritance, and is hence not really suitable for use with general modern C++. It was made to suit exile's C-style types with templates, and works accordingly. Such a system for modern C++ is hopefully in the works, and I'd be exited to play around with it.
