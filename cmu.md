@@ -1,10 +1,8 @@
 ---
 layout: page
-title: CMU
+title: CMU Course Opinions
 permalink: /cmu/
 ---
-
-# CMU Course Opinions
 
 Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang7.github.io/guides/2019/12/19/scs-guide.html), this is my take on my path through CMU (so far).
 
