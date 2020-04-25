@@ -74,7 +74,7 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 
 ## Fall 2019
 - 15-210: Parallel and Sequential Data Structures and Algorithms
-    - Algorithms are cool and you do a lot of problem solving with them. Another solid cs theory class, but not as special as 15-251. 
+    - Algorithms are cool, and you do a lot of problem solving with them. Another solid cs theory class, but not as special as 15-251. 
     - Also taught in a functional language; also not super hard if you grok the functional style.
     - I felt like there was less emphasis on parallelism than the name might suggest - this just meant that you analyze the span as well as the work of each algorithm.
 - 15-213: Introduction to Computer Systems
@@ -98,14 +98,14 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 **Notes:** The freshman advisor wouldn't let me register for graphics without the pre-requisite (15-213), even with instructor permission, but I got into it anyway by talking to the assistant dean (Tom). Moving into an apartment was great.
 
 ## Spring 2020
-- ☆ TA: 15-462 - Computer Graphics,
+- ☆ TA: 15-462 - Computer Graphics
     - See General Advice regarding TAing (TLDR: you should try it).
     - Working with students at OH can be fun, although it can be very hard to pinpoint issues in their code.
     - Over winter break I started working on re-writing the course codebase to be much cleaner, faster, and less confusing. I hope to deploy it fall 2020. Support for this project has been very encouraging, and being able to have this much influence over the course is surprising.
 - ☆ 15-259: Probability and Computing
     - Very well run, in-depth, and fast-paced. Highly recommended over the other probability options unless you want pure math, in which case you should take 21-325 or a measure theory course.
     - Includes CS applications of probability such as randomized algorithms, performance modeling, and Markov chains, which are all relevant to many areas of CS.
-    - Mor is great; she is experienced, enthusiastic, and cares about student success.
+    - Mor is great. She is experienced, enthusiastic, and cares about student success.
     - Moderate workload: one problem set every week. Exams are pretty easy.
 - ☆ 15-458: Discrete Differential Geometry
     - More of a math class than a CS class, but the CS portion (implementing results &amp; algorithms on real meshes) makes results tangible and very rewarding.
@@ -113,14 +113,14 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
     - Keenan is great (again), and in this class especially, his slides, diagrams, and animations are very elegant. They're used to teach this content all over the world.
     - Light workload: one moderate problem set + one short programming assignment every 2 weeks.
 - ☆ 15-410: Operating System Design and Implementation
-    - Infamous for being the highest pure workload class in CS. It really is a ton of work, but maybe not quite as much as people say.
-    - The staff will not make design decisions for you or debug your code; you must learn to design, test, evaluate, and debug a substantial project, from scratch, yourself.
-    - I found that most of the work is debugging - if you're not an effective debugger, this course will make you become one.
+    - Infamous for being the highest straight workload class in CS. It really is a ton of work, but maybe not quite as much as people say.
+    - The staff will not make design decisions for you or debug your code&mdash;you must learn to design, test, evaluate, and debug a substantial project, from scratch, yourself.
+    - I found that most of the work is debugging&mdash;if you're not an effective debugger, this course will make you become one.
     - You need to be able to work well with your partner.
 
-**Workload:** moderate but heavy during OS project weeks.
+**Workload:** moderate, but heavy during OS project weeks.
 
-**Notes:** as you can see, everything this semester has a star. All are highly recommended. Coronavirus made everything a bit crazy, but PnC &amp; DDG finished more or less normally and, while I don't think OS changes were handled/communicated well, the kernel got completed and end-of-semester work was reduced. Finally, also note that OS is not recommended as a first systems elective (esp. as a sophomore), and I'm going to agree with that unless you had enough systems experience that you found 15-213 easy.
+**Notes:** as you can see, everything this semester has a star&mdash;all are highly recommended. Coronavirus made everything a bit crazy, but PnC &amp; DDG finished more or less normally, and, while I don't think OS changes were handled/communicated well, the kernel got completed and end-of-semester work was reduced. Also note that OS is not recommended as a first systems elective (especially as a sophomore), and I'm going to agree with that unless you had enough systems experience that you found 15-213 easy.
 
 ## Summer 2020
 - Apple: GPU software intern
