@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 CMU SCS 2022.
-Interested in computer graphics, game engines, simulation, algorithms, languages.  
+Interested in computer graphics, systems, simulations, and algorithms.  
 
 [Résumé](assets/resume.pdf)
 
