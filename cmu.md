@@ -105,13 +105,13 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 - ☆ 15-259: Probability and Computing
     - Very well run, in-depth, and fast-paced. Highly recommended over the other probability options unless you want pure math, in which case you should take 21-325 or a measure theory course.
     - Includes CS applications of probability such as randomized algorithms, performance modeling, and Markov chains, which are all relevant to many areas of CS.
-    - Mor is great; very enthusiastic and cares a lot about student success.
+    - Mor is great; she is experienced, enthusiastic, and cares about student success.
     - Moderate workload: one problem set every week. Exams are pretty easy.
 - ☆ 15-458: Discrete Differential Geometry
     - More of a math class than a CS class, but the CS portion (implementing results &amp; algorithms on real meshes) makes results tangible and very rewarding.
-    - Probably my favorite math class ever, high recommended if you are into geometry at all.
-    - Keenan is still great, and in this class especially his slides, diagrams and animations. They're used to teach this content all over the world.
-    - Light workload: one moderate written + one short programming assignment every 2 weeks.
+    - Probably my favorite math class ever, highly recommended if you are into geometry at all.
+    - Keenan is great (again), and in this class especially, his slides, diagrams, and animations are very elegant. They're used to teach this content all over the world.
+    - Light workload: one moderate problem set + one short programming assignment every 2 weeks.
 - ☆ 15-410: Operating System Design and Implementation
     - Infamous for being the highest pure workload class in CS. It really is a ton of work, but maybe not quite as much as people say.
     - The staff will not make design decisions for you or debug your code; you must learn to design, test, evaluate, and debug a substantial project, from scratch, yourself.
