@@ -133,6 +133,7 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 - 15-411: Compiler Design
 - 15-451: Algorithm Design and Analysis
 - 15-300: Research and Innovation in Computer Science
+- 21-355: Principles of Real Analysis I
 - 60-125: Introduction to 3D Animation
 
 **Other:** graphics/geometry research
@@ -144,20 +145,18 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 # Preliminary Future Schedule
 
 ## Spring 2021
-- Systems elective (15-418, 15-440, 15-712, 15-744, 15-745)
+- 15-721: Database Systems
 - 15-400: Research Practicum in Computer Science
 - 11-485: Introduction to Deep Learning
-- 21-355: Principles of Real Analysis I
+- 21-261: Introduction to Ordinary Differential Equations
 - 33-120: Science and Science Fiction
 
 ## Fall 2021
-- Systems elective (15-418, 15-440, 15-712, 15-744, 15-745)
-- 15-463: Computational Photography
 - 15-599: Senior Research Thesis
-- 21-356: Principles of Real Analysis II
+- 15-418: Parallel Computer Architecture and Programming
+- 15-312: Foundations of Programming Languages
+- 21-469: Computational Introduction to Partial Differential Equations
+- 76-221: Books You Should Have Read By Now
 
 ## Spring 2022
-- 15-312: Foundations of Programming Languages
-- 15-599: Senior Research Thesis
-- 21-344: Numerical Linear Algebra
-- 76-211: Books You Should Have Read By Now
+- Research MS program?
