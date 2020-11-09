@@ -6,7 +6,7 @@ permalink: /cmu/
 
 Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang7.github.io/guides/2019/12/19/scs-guide.html), this is my take on my path through CMU (so far).
 
-**Goal:** CS major, computer systems concentration, math minor. I am planning on applying to grad school (PhD) in computer graphics or systems (or both). I also enjoy algorithms, but am prioritizing the former, which I am better at.
+**Goal:** CS major, computer graphics and computer systems concentrations. I am planning on applying to grad school (PhD) in graphics or systems (or both). I also enjoy algorithms, but am prioritizing the former, which I am better at.
 
 **Background:** I entered CMU with an extensive programming background (systems + real-time graphics) and solid math background, but no super high level math or competitive math/programming experience. 
 
@@ -124,16 +124,33 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 
 ## Summer 2020
 - Apple: GPU software intern
-    - TBD
+    - Update soon (tm)
 
 ## Fall 2020
 - TA: 15-462 - Computer Graphics
-    - Hoping to put new codebase into production.
-- 15-411: Compiler Design
+    - Put new codebase into production.
+- ☆ 15-411: Compiler Design
 - 15-451: Algorithm Design and Analysis
 - 15-300: Research and Innovation in Computer Science
 - 21-355: Principles of Real Analysis I
 - 60-125: Introduction to 3D Animation
+
+**Other:** Started working with the Geometry Collective
+
+**Workload:** Always heavy
+
+**Notes:** TBD
+
+## Summer 2020
+- Research or working at Jane Street
+
+## Spring 2021
+- TA: 15-462 - Computer Graphics
+- 15-400: Research Practicum in Computer Science
+- 15-418: Parallel Computer Architecture and Programming
+- 15-464: Technical Animation
+- 15-468: Special Topic: Physics-Based Rendering
+- 33-120: Science and Science Fiction
 
 **Other:** TBD
 
@@ -143,18 +160,13 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 
 # Preliminary Future Schedule
 
-## Spring 2021
-- 15-400: Research Practicum in Computer Science
-- 15-721: Database Systems
-- 11-485: Introduction to Deep Learning
-- 21-261: Introduction to Ordinary Differential Equations
-- 33-120: Science and Science Fiction
-
 ## Fall 2021
 - 15-740: Computer Architecture
-- 15-312: Foundations of Programming Languages
-- 21-372: Partial Differential Equations and Fourier Analysis
-- 76-221: Books You Should Have Read By Now
+- 15-463: Computational Photography
+- 15-xxx: [Logics & Languages Elective]
+- 11-485: Introduction to Deep Learning
+- 80-251: Modern Philosophy
+- Research
 
 ## Spring 2022
-- Research MS program?
+- PhD/research MS/nothing
