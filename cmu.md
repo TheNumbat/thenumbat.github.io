@@ -113,7 +113,7 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
     - Light workload: one moderate problem set + one short programming assignment every 2 weeks.
 - ☆ 15-410: Operating System Design and Implementation
     - Infamous for being the highest straight workload class in CS. It really is a ton of work, but not _quite_ as much as people say.
-    - The staff will not make design decisions for you or debug your code&mdash; you must learn to design, test, evaluate, and debug a substantial low-level project, from scratch, yourself.
+    - The staff will not make design decisions for you or debug your code&mdash;you must learn to design, test, evaluate, and debug a substantial low-level project, from scratch, yourself.
     - Most of the work is debugging&mdash;if you're not yet an effective debugger, this course will make you become one whether you like it or not.
     - You need to be able to work well with your partner. Group work issues are common.
     - The midterm/final were difficult and stressful, and I don't think they should exist.
