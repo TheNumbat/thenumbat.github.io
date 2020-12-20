@@ -50,7 +50,7 @@ Dimensionality reduction and visualization tool for high dimensional data sets.
 
 [GitHub](https://github.com/TheNumbat/3D-Grapher) \| [Download](https://github.com/TheNumbat/3D-Grapher/releases)
 
-Visualization tool for multi-variable calculus course at my high school.
+Visualization tool for the multi-variable calculus course at my high school.
 
 ### C++ Curriculum
 
