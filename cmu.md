@@ -6,9 +6,9 @@ permalink: /cmu/
 
 Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang7.github.io/guides/2019/12/19/scs-guide.html), this is my take on my path through CMU (so far).
 
-**Goal:** CS major, computer graphics and computer systems concentrations. I am planning on applying to grad school (PhD) in graphics or systems (or both). I also enjoy algorithms, but am prioritizing the former, which I am better at.
+**Goal:** CS major, computer graphics concentration, and computer systems concentration. I am planning on applying to grad school (PhD) in graphics or systems (or both). I also enjoy learning algorithms, but am prioritizing the former, which I am better at.
 
-**Background:** I entered CMU with an extensive programming background (systems + real-time graphics) and solid math background, but no super high level math or competitive math/programming experience. 
+**Background:** I entered CMU with an extensive programming background in both systems and some real-time graphics, as well as a decent undergrad math background. I didn't have any competitive math/programming experience. 
 
 **☆**: courses which I thought were worth attending CMU for. Courses without a star are still worthwhile unless stated otherwise, but did not particularly stand out.
 
@@ -60,17 +60,16 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 - 80-150: Nature of Reason
     - Pretty useless, don't take this. Minimal work, though.
 
-**Workload:** probably moderate, but felt quite heavy due to living situation &amp; not sleeping enough
+**Workload:** probably moderate, but often felt heavy due to living situation stress &amp; not sleeping enough
 
 **Notes:** I really hated living in a dorm...
 
 ## Summer 2019
 - NVIDIA: 3D graphics software intern
     - I talked to their recruiters at one of the career fairs, but I don't think that turned into anything. I just applied online and interviewed for the position.
-    - This was the only internship offer I received, which was highly unusual because NVIDIA mostly hires juniors and sophomores.
+    - This was the only internship offer I received, which was unusual because NVIDIA mostly hires juniors and sophomores.
     - The position turned out to be kind of boring for me; I got to work on some interesting GPU performance metrics, but it alternated between being too much high level build-service-benchmark-gluing and too much low level hardware stuff, as opposed to working on actual graphics software.
     - Two particularly memorable parts were touring their silicon failure analysis lab and visiting the house of Jensen Huang.
-    - I don't want to be a software engineer, although it paid a lot.
 
 ## Fall 2019
 - 15-210: Parallel and Sequential Data Structures and Algorithms
@@ -93,7 +92,7 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
     - Teaches laboratory skills but the physics is quite basic.
     - Minimal work outside of class.
 
-**Workload:** moderate-heavy depending on how many due dates coincided
+**Workload:** moderate to heavy depending on how many due dates coincided
 
 **Notes:** The freshman advisor wouldn't let me register for graphics without the pre-requisite (15-213), even with instructor permission, but I got into it anyway by talking to the assistant dean (Tom). Moving into an apartment was great.
 
@@ -113,36 +112,55 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
     - Keenan is great (again), and in this class especially, his slides, diagrams, and animations are very elegant. They're used to teach this content all over the world.
     - Light workload: one moderate problem set + one short programming assignment every 2 weeks.
 - ☆ 15-410: Operating System Design and Implementation
-    - Infamous for being the highest straight workload class in CS. It really is a ton of work, but maybe not quite as much as people say.
-    - The staff will not make design decisions for you or debug your code&mdash;you must learn to design, test, evaluate, and debug a substantial project, from scratch, yourself.
-    - I found that most of the work is debugging&mdash;if you're not an effective debugger, this course will make you become one.
-    - You need to be able to work well with your partner.
+    - Infamous for being the highest straight workload class in CS. It really is a ton of work, but maybe not quite as much as people say. It will, at least, the thing you think about most. 
+    - The staff will not make design decisions for you or debug your code&mdash; you must learn to design, test, evaluate, and debug a substantial low-level project, from scratch, yourself.
+    - Most of the work is debugging&mdash;if you're not yet an effective debugger, this course will make you become one whether you like it or not.
+    - You need to be able to work well with your partner. Group work issues are common.
+    - The midterm/final were difficult and stressful, and I don't think they should exist.
 
-**Workload:** moderate, but heavy during OS project weeks.
+**Workload:** moderate to heavy depending on when an OS project was due.
 
-**Notes:** as you can see, everything this semester has a star&mdash;all are highly recommended. Coronavirus made everything a bit crazy, but PnC &amp; DDG finished more or less normally, and, while I don't think OS changes were handled/communicated well, the kernel got completed and end-of-semester work was reduced. Also note that OS is not recommended as a first systems elective (especially as a sophomore), and I'm going to agree with that unless you had enough systems experience that you found 15-213 easy.
+**Notes:** everything this semester has a star&mdash;all are recommended. Coronavirus arriving midway through the semester made everything go a bit crazy, but PnC &amp; DDG finished more or less normally, and, while OS changes were mostly bungled, kernels got completed and end-of-semester work was somewhat reduced. I didn't really feel that OS deserved its reputation as _the_ systems class to take, as I found a good portion of its difficulty to be incidental and not contribute to learning. That said, OS will still teach you a lot about low level design and debugging, so it's worth taking if you want a systems concentration. (Otherwise, eh...) Also note that it is not generally recommended to take OS as a first systems elective (especially as a sophomore), and I'd agree with that unless one has found 15-213 very easy.
 
 ## Summer 2020
 - Apple: GPU software intern
-    - Update soon (tm)
+    - Reasonably interesting and worked with some cool people, but was was overall a bit boring and not a ton of work.
+    - Was fully remote, so I didn't get to meet people in person or to go Apple HQ.
+    - Got to present my intern project to SVP of software Craig Federighi.
+    - Learned more about Metal, which is a pretty cool API (similar to Vulkan, but a bit less crufty) and has great shader development/debugging tools.
 
 ## Fall 2020
 - TA: 15-462 - Computer Graphics
-    - Put new codebase into production.
+    - Put new codebase into production. Went quite well overall, and students made some _way_ cooler results!
+    - Otherwise same thoughts on TAing as last semester.
 - ☆ 15-411: Compiler Design
+    - The other infamous (workload) systems class. My experience isn't particularly representative, but I found it _far_ easier and less stressful than OS. Unlike OS, you're given thousands of test cases, and if your compiler passes all of them, it gets 100%. No more combing through code for concurrency mistakes for days on end.
+    - Interesting content, although the lectures tended to be more abstract and advanced than was required to implement the projects. 
+    - Projects require building up a decent sized codebase (ours is ~7k lines) of your own code over the semester, which is good for learning to technically manage a significant project. You pick the language - I learned Rust for this class, which turned out to be interesting and useful.
+    - As with OS, you need to be able to work well with your partner. 
 - 15-451: Algorithm Design and Analysis
+    - I wish I could say this was a great extension of 15-210/15-251, but it really wasn't. Some of the topics were interesting to me, such as computational geometry, but others were either review or too theoretical to fully understand without dedicating more time than they were worth to me.
+    - The professors (Miller/Sutner) were a bit out of touch, as they typically teach grad theory classes and CDM, respectively.
+    - Had some programming homeworks in the style of competitive programming, which were pretty cool problems.
+    - Midterm class average: 50% (lol)
 - 15-300: Research and Innovation in Computer Science
+    - Learning more about my area of research (geometry processing) was great!
+    - Basically a gen ed class (technical writing requirement), so was a drag at times.
+    - Set up research project with geometry collective for next semester.
+    - Wrote/presented some pretty good technical write-ups.
 - 21-355: Principles of Real Analysis I
-- 60-125: Introduction to 3D Animation
+    - Was less interesting than I had hoped, but still useful for formalizing my thinking about basic continuous math. Also serves as a pre-requisite for all upper-level continuous math courses.
+    - Not too much work in of itself, but it pushed my workload from being often stressful to being basically always stressful, so I kind of regret taking it. I was originally taking it to complete the math minor, but I've now decided to do the new graphics concentration instead of the minor.
+- ☆ 60-125: Introduction to 3D Animation
+    - Very cool class and pretty fun! You learn each step of the 3D animation pipeline (mostly for film, but also games) by doing it yourself. You assemble everything you've built up over the semester into a final animation.
+    - A surprising amount of work. Modelling is hard. Rigging is hard. Animation is hard. Everything is hard. I wish I had more time to dedicate to it in order to make more impressive final piece, but I still learned all the content.
+    - Good to experience the art side of computer graphics. (This is an art class.)
 
-**Other:** Started working with the Geometry Collective
+**Other:** Started working with the [Geometry Collective](http://geometry.cs.cmu.edu/).
 
-**Workload:** Always heavy
+**Workload:** mostly death
 
-**Notes:** TBD
-
-## Summer 2020
-- Research or working at Jane Street
+**Notes:**  Much harder to stay motivated with online classes this semester. Did many things last minute or late in the latter half of the semester.
 
 ## Spring 2021
 - TA: 15-462 - Computer Graphics
@@ -152,21 +170,31 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 - 15-468: Special Topic: Physics-Based Rendering
 - 33-120: Science and Science Fiction
 
-**Other:** TBD
+**Other:** 15-400 is a research project, not a class.
 
 **Workload:** TBD
 
-**Notes:** TBD
+**Notes:** Really looking forward to these classes! I can finally focus on what I am most interested in.
+
+## Summer 2021
+- Jane Street: SWE Intern
+    - Not graphics, but will hopefully be interesting on the systems programming side (in OCaml, too).
+    - $$$$
 
 # Preliminary Future Schedule
 
 ## Fall 2021
 - 15-740: Computer Architecture
 - 15-463: Computational Photography
-- 15-xxx: [Logics & Languages Elective]
+- 15-317: Constructive Logic
 - 11-485: Introduction to Deep Learning
 - 80-251: Modern Philosophy
-- Research
+
+**Other:** 
+
+**Workload:** TBD
+
+**Notes:** TBD
 
 ## Spring 2022
-- PhD/research MS/nothing
+- On to MS or PhD
