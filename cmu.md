@@ -179,7 +179,7 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 ## Summer 2021
 - Jane Street: SWE Intern
     - Not graphics, but will hopefully be interesting on the systems programming side (in OCaml, too).
-    - $$$$
+    - \$\$\$\$
 
 # Preliminary Future Schedule
 
