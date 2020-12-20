@@ -6,7 +6,7 @@ permalink: /about/
 
 Rising senior in CMU SCS. Interested in computer graphics, systems, simulations, games, and algorithms.  
 
-[Résumé](assets/resume.pdf)
+[Résumé/CV](assets/mslater_cv.pdf)
 
 ## Active Projects
 
