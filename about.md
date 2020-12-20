@@ -38,7 +38,7 @@ Curated articles from around the web focusing on several areas of computer scien
 
 [GitHub](https://github.com/TheNumbat/Dawn)
 
-Simple but performant path tracer with a focus data-oriented design.
+Simple but performant path tracer with a focus on data-oriented design.
 
 ### Viz.ml (HackCMU 2018)
 
