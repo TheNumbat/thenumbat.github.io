@@ -120,14 +120,14 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 
 **Workload:** moderate to heavy depending on when an OS project was due.
 
-**Notes:** everything this semester has a star&mdash;all are recommended. Coronavirus arriving midway through the semester made everything go a bit crazy, but PnC &amp; DDG finished more or less normally, and, while OS changes were mostly bungled, kernels got completed and end-of-semester work was somewhat reduced. I didn't really feel that OS deserved its reputation as _the_ systems class to take, as I found a good portion of its difficulty to be incidental and not contribute to learning. That said, OS will still teach you a lot about low level design and debugging, so it's worth taking if you want a systems concentration. Otherwise, eh...there are probably better uses of your time. Also note that is not generally recommended to take OS as a first systems elective (especially as a sophomore), and I'd agree with that unless one has found 15-213 easy.
+**Notes:** everything this semester has a star&mdash;all are recommended. Coronavirus arriving midway through the semester made everything go a bit crazy, but PnC &amp; DDG finished more or less normally, and, while OS changes were mostly bungled, kernels got completed and end-of-semester work was somewhat reduced. I didn't really feel that OS deserved its reputation as _the_ systems class to take, as I found a good portion of its difficulty to be incidental and not contribute to learning. That said, OS will still teach you a lot about low level design, debugging, and concurrency, so it's worth taking if you want a systems concentration. Otherwise, eh...there are probably better uses of your time. Also note that OS is not generally recommended as a first systems elective (especially as a sophomore), and I'd agree with that unless one found 15-213 easy.
 
 ## Summer 2020
 - Apple: GPU software intern
-    - Reasonably interesting and worked with some cool people, but was was overall a bit boring and not a ton of work.
-    - Was fully remote, so I didn't get to meet people in person or to go Apple HQ.
+    - Reasonably interesting and worked with some cool people, but overall was a bit boring and not a ton of work.
+    - Was fully remote, so I didn't get to meet people in person or go to Apple HQ.
     - Got to present my intern project to SVP of software Craig Federighi.
-    - Learned more about Metal, which is a pretty cool API (similar to Vulkan, but a bit less crufty) and has great shader development/debugging tools.
+    - Learned more about Metal, a pretty cool API (similar to Vulkan, but a bit less crufty) with great shader development/debugging tools.
 
 ## Fall 2020
 - TA: 15-462 - Computer Graphics
@@ -154,7 +154,7 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 - ☆ 60-125: Introduction to 3D Animation
     - Very cool class and pretty fun! You learn each step of the 3D animation pipeline (mostly for film, but also games) by doing it yourself. You assemble everything you've built up over the semester into a final animation.
     - A surprising amount of work. Modelling is hard. Rigging is hard. Animation is hard. Everything is hard. I wish I had more time to dedicate to it in order to make more impressive final piece, but I still learned all the content.
-    - Good to experience the art side of computer graphics. (This is an art class.)
+    - Good to experience the art side of computer graphics.
 
 **Other:** Started working with the [Geometry Collective](http://geometry.cs.cmu.edu/).
 
