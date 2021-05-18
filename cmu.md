@@ -212,7 +212,7 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 
 **Workload:** light
 
-**Notes:** I'm still mad that I didn't get transfer credit for 21-241, 21-259, or 15-122...I really did not need to re-take these. Thanks, Jacobo. I also regret not taking the honors freshman math track, which is 21-242 and 21-269. I wasn't selected for 21-242 based on the freshman math maturity survey, but I am pretty sure I could have handled it. In a perfect world, I probably would have taken 15-150, 15-151, 21-242 first semester and 15-213, 15-251, 21-269 second semester (although that might have been a deathly workload).
+**Notes:** I'm still mad that I didn't get transfer credit for 21-241, 21-259, or 15-122...I really did not need to re-take these. Thanks, Jacobo. I also regret not taking the honors freshman math track, which is 21-242 and 21-269. I wasn't selected for 21-242 based on the freshman math maturity survey, but I am pretty sure I could have handled it. In a perfect world, I probably would have taken 15-150, 15-151, and 21-242 first semester, 15-213, 15-210, and 21-269 second semester, and 15-251 + electives third semester.
 
 ## Advice for Freshmen
 - Doing research freshman year isn't a great idea - you can't do that much without completing the CS core, even if a professor gives you a real project. First year, I would instead recommend focusing on doing excellently in/doing more of the core. Over the following summer, however, getting into research is a great idea if you don't want/get an internship. (FYI - freshman internships are unusual.)
