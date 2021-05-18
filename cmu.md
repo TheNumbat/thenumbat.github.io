@@ -10,7 +10,7 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 
 **Background:** I entered CMU with an extensive programming background in both systems and some real-time graphics, as well as a decent undergrad math background. I didn't have any competitive math/programming experience. 
 
-**☆**: courses which I thought were worth attending CMU for. Courses without a star are still worthwhile unless stated otherwise, but did not particularly stand out.
+**☆**: courses which I thought were worth attending CMU for. Courses without a star are still worthwhile unless stated otherwise, but one could find a similar experience at other universities.
 
 ## Fall 2021 (Preliminary)
 - 11-485: Introduction to Deep Learning
@@ -91,7 +91,7 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 - 21-355: Principles of Real Analysis I
     - Was less interesting than I had hoped, but still useful for formalizing my thinking about basic continuous math. Also serves as a pre-requisite for all upper-level continuous math courses.
     - Not too much work in of itself, but it pushed my workload from being often stressful to being basically always stressful, so I kind of regret taking it. I was originally taking it to complete the math minor, but I've now decided to do the new graphics concentration instead of the minor.
-- ☆ 60-125: Introduction to 3D Animation
+- 60-125: Introduction to 3D Animation
     - Very cool class and pretty fun! You learn each step of the 3D animation pipeline (mostly for film, but also games) by doing it yourself. You assemble everything you've built up over the semester into a final animation.
     - A surprising amount of work. Modelling is hard. Rigging is hard. Animation is hard. Everything is hard. I wish I had more time to dedicate to it in order to make more impressive final piece, but I still learned all the content.
     - Good to experience the art side of computer graphics.
