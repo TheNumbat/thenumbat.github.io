@@ -51,7 +51,7 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
     - Very cool content. Lectures mostly trace the history of research in animation.
     - Occasionally a bit boring, but I learned a lot more about simulation, which was the main reason I took the class.
     - Work is primarily two small projects and a final project, which all provide good opportunities to explore topics of interest. I implemented various IK algorithms for the first, mass-spring cloth for the second, and position based fluid simulation/rendering for the final. I added each of these to Scotty3D, so I'm planning on merging them into the main codebase as additional animation tasks.
-    - Students write a [lecture blog](https://github.com/TheNumbat/15464-s21).
+    - Students write a [lecture blog](https://thenumbat.github.io/15464-s21/).
 - 15-468: Physics-Based Rendering
     - Quite enjoyed this class and learned a lot after the first 1/3rd, which was mostly 462 review. Ioannis (Yannis) is a good lecturer and does really cool research. 
     - Programming assignments were too short, but some more advanced ones will be added next time >:)
