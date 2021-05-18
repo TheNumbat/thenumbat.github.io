@@ -40,7 +40,7 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 - 15-400: Research Practicum in Computer Science
     - This is a research project rather than a class. I worked on implementing various BVH strategies for computing closest point queries, and analyzed which perform the best on various hardware architectures (CPU/GPU). We found some interesting results that diverged from previous work on high performance ray tracing, but overall there is no panacea for closest points.
     - I worked with Rohan &amp; Keenan within the geometry collective. All of the GC PhD students are generally very knowledgeable and fun to talk or listen to. 
-    - I struggled a lot to find time/motivation for the project during the first half of the semester, but was able to focus more during the second half.
+    - I struggled a lot to find time/motivation for the project during the first half of the semester, but was able to focus more during the second half. It helped a lot to combine the latter part of this project (GPU analysis) with my 15-418 final project. 
 - 15-418: Parallel Computer Architecture and Programming
     - Teaches some very useful content, and I'm quite interested in this area. The second assignment on writing a CUDA circle rasterizer was pretty cool.
     - However, I don't think the class was run very well this semester - the other projects were a bit lackluster (and easy) and the course staff weren't very attentive.
@@ -67,7 +67,7 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 
 **Workload:** light for the first 2/3rds, heavy for the last 1/3rd - all four technical classes have big final projects
 
-**Notes:** I finally got to take classes purely in my area(s) of interest, so I enjoyed this semester more than others. I overdid it a bit with four (actually three) final projects at once (plus TAing, again)&mdash;I wasn't able to focus on each enough to do the best project ever. But, I still did well and am reasonably happy with the results. This summer I'll be writing some blog posts covering the interesting parts of fluid sim / RTX path tracing / Vulkan and BVHs. Also got extremely good TA feedback again.
+**Notes:** I finally got to take classes purely in my area(s) of interest, so I enjoyed this semester more than others. I overdid it a bit with 3.5 final projects at once (plus TAing, again)&mdash;I wasn't able to focus on each enough to do the best project ever. But, I still did well and am reasonably happy with the results. This summer I'll be writing some blog posts covering the interesting parts of fluid sim / RTX path tracing / Vulkan and BVHs. Also got extremely good TA feedback again.
 
 ## Fall 2020
 - TA: 15-462 - Computer Graphics
