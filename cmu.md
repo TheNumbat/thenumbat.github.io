@@ -38,26 +38,26 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
     - This was the second semester we tried moderating a course discord server, and it was quite helpful for facilitating student interactions and getting people to help each other. Also produced several enthusiastic students who will be new TAs and/or Scotty3D contributors!
     - Overall, still same thoughts on TAing.
 - 15-400: Research Practicum in Computer Science
-    - This is a research project rather than a class. I worked on implementing various BVH strategies for computing closest point queries, and analyzed which perform the best on various hardware architectures (CPU/GPU). We found some interesting results that diverged from previous work on high performance ray tracing, but overall there is no panacea for closest points.
-    - I worked with Rohan &amp; Keenan within the geometry collective. All of the GC PhD students are generally very knowledgeable and fun to talk or listen to. 
-    - I struggled a lot to find time/motivation for the project during the first half of the semester, but was able to focus more during the second half. It helped a lot to combine the latter part of this project (GPU analysis) with my 15-418 final project. 
+    - I implemented various strategies for computing closest point queries and analyzed their performance on both the CPU and GPU. I found some interesting results that diverged from previous work on high performance ray tracing, but overall there is no panacea for closest points.
+    - I worked with Rohan &amp; Keenan of the Geometry Collective. All of the GC PhD students are generally very knowledgeable and fun to talk or listen to. 
+    - I struggled a lot to find time/motivation for this project during the first half of the semester, but was able to focus more during the second. Combining the latter part of this project (GPU analysis) with my 15-418 final project helped a lot.
 - 15-418: Parallel Computer Architecture and Programming
-    - Teaches some very useful content, and I'm quite interested in this area. The second assignment on writing a CUDA circle rasterizer was pretty cool.
-    - However, I don't think the class was run very well this semester - the other projects were a bit lackluster (and easy) and the course staff weren't very attentive.
-    - Spent more time on architecture (cache coherency, interconnections, heterogeneity) than I would have preferred, but those parts were still reasonably interesting. I preferred the parts on parallel programming models, ILP, GPUs, synchronization, lock free code, etc. 
-    - CUDA, OpenMP, ISPC, MPI, and various DSLs are cool, but I think I will stick with my raw C++/SIMD intrinsics/Vulkan. :p
-    - I recommend this class for people who want to take only one systems elective, as understanding how to achieve high performance through parallelism is quite broadly useful. As a part of the systems concentration, I think it's still useful but not vital. OS covers low-level concurrent programming in far more depth. 
+    - Teaches some interesting and useful content. The second assignment on writing a CUDA circle rasterizer was pretty cool.
+    - I don't think the class was run very well this semester - the other projects were a bit lackluster (and easy) and the course staff weren't very attentive.
+    - Spent more time on architecture (cache coherency, interconnections, heterogeneity) than I would have preferred, but those parts were still reasonably interesting. I enjoyed the parts on parallel programming models, ILP, GPUs, synchronization, lock free code, etc. 
+    - I would recommend this class to people who want to take exactly one systems elective, as understanding how to achieve high performance through parallelism is quite broadly useful. I think it's also useful as a part of the systems concentration, but not vital, as the content could be learned on-demand. OS covers low-level concurrent programming in far more depth. 
 - 15-464: Technical Animation
-    - Very cool content. Lectures mostly trace the history of research in animation.
-    - Occasionally a bit boring, but I learned a lot more about simulation, which was the main reason I took the class.
-    - Work is primarily two small projects and a final project, which all provide good opportunities to explore topics of interest. I implemented various IK algorithms for the first, mass-spring cloth for the second, and position based fluid simulation/rendering for the final. I added each of these to Scotty3D, so I'm planning on merging them into the main codebase as additional animation tasks.
+    - Very cool content. Lectures trace the history of research in animation.
+    - I learned a lot more about simulation, which was the main reason I took the class. Some lectures were a bit boring, though.
+    - Assignments include two small projects and a final project, which all provide good opportunities to explore topics of interest. I implemented various IK algorithms for the first, mass-spring cloth for the second, and position based fluid simulation/rendering for the final. I added each of these to Scotty3D, so I'm planning on merging them into the main codebase as additional animation tasks.
     - Students write a [lecture blog](https://thenumbat.github.io/15464-s21/).
 - 15-468: Physics-Based Rendering
-    - Quite enjoyed this class and learned a lot after the first 1/3rd, which was mostly 462 review. Ioannis (Yannis) is a good lecturer and does really cool research. 
+    - Quite enjoyed this class; learned a lot after the first 1/3rd, which was mostly 462 review. 
+    - Ioannis (call him Yannis) is a good lecturer and does really cool research. 
     - Programming assignments were too short, but some more advanced ones will be added next time >:)
     - Homework effectively emphasized fully understanding the mathematical underpinnings.
-    - Reading groups (optional) were quite interesting and gave a window into contemporary rendering research.
-    - Final project was a good opportunity to explore a particularly interesting advanced topic. I implemented a real-time RTX path tracer, which turned out to be super cool. I'd like to do more projects, though! I also enjoyed BDPT, (PSS) (M)MLT, specular NEE, volumetric/spectral/polarized/time of flight rendering, and differentiable rendering.
+    - The reading group was quite interesting and gave a window into contemporary rendering research.
+    - Final project was a good opportunity to explore an interesting advanced topic. I implemented a real-time RTX path tracer, which produced some great results. I'd like to do more projects in this area - BDPT, (PSS) (M)MLT, specular NEE, volumetric/spectral/polarized/time of flight rendering, and differentiable rendering were all intriguing.
     - This was the first time a rendering class has been offered at CMU in over 15 years, so it wasn't fully polished, but I thought it was run well.
 - 33-120: Science and Science Fiction
     - Similar to experimental physics (same professor).
@@ -65,9 +65,9 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 
 **Other:** geometry collective/graphics lab meetings. A period of severe personal issues (resolved).
 
-**Workload:** light for the first 2/3rds, heavy for the last 1/3rd - all four technical classes have big final projects
+**Workload:** light for the first 2/3rds, heavy for the last 1/3rd - all four 15- classes have final projects.
 
-**Notes:** I finally got to take classes purely in my area(s) of interest, so I enjoyed this semester more than others. I overdid it a bit with 3.5 final projects at once (plus TAing, again)&mdash;I wasn't able to focus on each enough to do the best project ever. But, I still did well and am reasonably happy with the results. This summer I'll be writing some blog posts covering the interesting parts of fluid sim / RTX path tracing / Vulkan and BVHs. Also got extremely good TA feedback again.
+**Notes:** I finally got to take classes purely in my area(s) of interest, so I enjoyed this semester more than others. I overdid it a bit with 3.5 final projects at once (plus TAing)&mdash;I wasn't able to focus on each enough to produce the best project ever. But, I still did well and am reasonably happy with the results. This summer I'll be writing some blog posts covering the interesting parts of fluid sim / RTX path tracing / Vulkan and BVHs. Also got extremely good TA feedback again.
 
 ## Fall 2020
 - TA: 15-462 - Computer Graphics
