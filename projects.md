@@ -1,6 +1,5 @@
 ---
-layout: page
-title: Projects
+layout: default
 permalink: /projects/
 ---
 

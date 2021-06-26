@@ -25,12 +25,6 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 
 **Notes:** TBD
 
-## Summer 2021
-- Jane Street: SWE Intern
-    - Not graphics, but interesting on the systems programming side.
-    - OCaml
-    - \$\$\$\$
-
 ## Spring 2021
 - TA: 15-462 - Computer Graphics
     - Was a bit less interesting this time since no big changes were introduced. Will probably not TA again in order to free up more time for research work.
@@ -101,13 +95,6 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 
 **Notes:** It was much harder to stay motivated in online classes outside of my preferred areas&mdash;did many things last minute or late in the latter half of the semester. I probably should have taken fewer classes, but I did end up doing well in all of them. I also got extremely good TA feedback. 
 
-## Summer 2020
-- Apple: GPU Software Intern
-    - Reasonably interesting and worked with some cool people, but overall was a bit boring and not a ton of work.
-    - Was fully remote, so I didn't get to meet people in person or go to Apple HQ.
-    - Got to present my intern project to SVP of software Craig Federighi.
-    - Learned more about Metal, a pretty cool API (similar to Vulkan, but a bit less crufty) with great shader development/debugging tools.
-
 ## Spring 2020
 - ☆ TA: 15-462 - Computer Graphics
     - See general advice regarding TAing below (recommended).
@@ -158,13 +145,6 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 **Workload:** moderate to heavy depending on how many due dates coincided
 
 **Notes:** The freshman advisor wouldn't let me register for graphics without the pre-requisite (15-213), even with instructor permission, but I got into it anyway by talking to Tom Cortina (the assistant dean). Moving into an off campus apartment made everything significantly better&mdash;from then on I always slept for 8-9 hours.
-
-## Summer 2019
-- NVIDIA: 3D Graphics Software Intern
-    - I had originally spoken with NVIDIA's recruiters at one of the CMU career fairs, but I don't think that turned into anything. For this position, I just applied and interviewed online.
-    - This was the only internship offer I received, which was unusual because NVIDIA mostly hires juniors and sophomores.
-    - The actual job turned out to be rather boring for me: I got to work on some interesting GPU performance metrics, but it alternated between simple build-service-benchmark-plumbing and hardware work that I didn't have much experience with.
-    - The most memorable parts were touring NVIDIA's silicon failure analysis lab and the annual intern event at the house of Jensen Huang.
 
 ## Spring 2019
 - 15-150: Principles of Functional Programming
