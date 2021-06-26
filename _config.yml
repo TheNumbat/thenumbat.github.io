@@ -18,17 +18,17 @@ avatar: /assets/icon.jpg
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: mjslater@andrew.cmu.edu
+  email: numbat@cmu.edu
   facebook:
   flickr:
   github: TheNumbat
   instagram:
-  linkedin:
+  linkedin: thenumbat
   pinterest:
   rss: anything # just type anything here for a working RSS icon
   twitter: 
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
+  youtube: channel/UCI1MRQKe-WYCmHJ5J3xVyvA # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
