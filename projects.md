@@ -5,7 +5,7 @@ permalink: /projects/
 ---
 
 <div class="projects">
-  {% for post in site.projects %}
+  {% for post in site.categories.projects %}
   	{% unless post.draft %}
     <article class="post">
 
