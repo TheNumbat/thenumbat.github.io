@@ -4,23 +4,22 @@ title: CMU Course Opinions
 permalink: /cmu/
 ---
 
-Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang7.github.io/guides/2019/12/19/scs-guide.html), this is my take on my path through CMU (so far).
+Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang7.github.io/guides/2019/12/19/scs-guide.html), this includes thoughts on my path through CMU SCS.
 
-**Goal:** CS major, computer graphics concentration, and computer systems concentration. I am planning on applying to PhD programs in graphics/systems. I also like algorithms, but focus on the former, which I am better at.
+**Degree:** BS in computer science with concentrations in computer graphics and computer systems. I am applying to PhD programs in graphics. I also like algorithms and programming languages, but don't focus on them.
 
-**Background:** I entered CMU with an extensive programming background in both systems and some real-time graphics, as well as a decent undergrad math background. I didn't have any competitive math/programming experience. 
+**Pre-CMU:** I entered CMU with an extensive programming background in systems and some real-time graphics, as well as a decent undergrad-level math background. I didn't have any competitive math/programming experience. 
 
-**☆**: courses which I thought were worth attending CMU for. Courses without a star are still worthwhile unless stated otherwise, but one could find a similar experience at other universities.
+**☆**: courses which I thought were worth attending CMU for. Courses without a star are still worthwhile unless stated otherwise, but one could find similar content/experiences at other universities.
 
-## Fall 2021 (Preliminary)
+## Fall 2021 
 - 11-485: Introduction to Deep Learning
 - 10-414: Deep Learning Systems: Algorithms and Implementation
 - 17-363: Programming Language Pragmatics
 - 15-591: Independent Study Research
 - 79-395: The Arts in Pittsburgh
-- Not 21-360: Differential Geometry of Curves and Surfaces (sad!)
 
-**Other:** Grad school applications.
+**Other:** PhD applications.
 
 **Workload:** TBD
 
@@ -28,79 +27,79 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 
 ## Summer 2021
 - Jane Street: SWE Intern
-    - Not graphics, but will be interesting on the systems programming side (I hope).
+    - Not graphics, but interesting on the systems programming side.
     - OCaml
     - \$\$\$\$
 
 ## Spring 2021
 - TA: 15-462 - Computer Graphics
-    - Was a bit less interesting this semester as no big changes were introduced. Will probably not TA fall 2021 to free up more time for research work (grad school apps are coming...).
-    - This was the second semester we tried moderating a course discord server, and it was quite helpful for facilitating student interactions and getting people to help each other. Also produced several enthusiastic students who will be new TAs and/or Scotty3D contributors!
-    - Overall, still same thoughts on TAing.
+    - Was a bit less interesting this time since no big changes were introduced. Will probably not TA again in order to free up more time for research work.
+    - This was the second semester we ran a course discord server, and it was quite helpful for facilitating student interactions and getting people to help each other. It produced several enthusiastic students who will be new TAs and/or Scotty3D contributors.
+    - Overall, my previous thoughts on TAing still apply.
 - 15-400: Research Practicum in Computer Science
-    - I implemented various strategies for computing closest point queries and analyzed their performance on both the CPU and GPU. I found some interesting results that diverged from previous work on high performance ray tracing, but overall there is no panacea for closest points.
-    - I worked with Rohan &amp; Keenan of the Geometry Collective. All of the GC PhD students are generally very knowledgeable and fun to talk or listen to. 
-    - I struggled a lot to find time/motivation for this project during the first half of the semester, but was able to focus more during the second. Combining the latter part of this project (GPU analysis) with my 15-418 final project helped a lot.
+    - I implemented various strategies for computing closest point queries, analyzing their performance on both the CPU and GPU. I found some interesting results that diverged from previous work on high performance ray tracing, but overall there is no panacea for closest points.
+    - I worked with Rohan Sawhney &amp; Keenan Crane of the CMU Geometry Collective. All of the GC PhD students are generally very knowledgeable and fun to talk or listen to. 
+    - I struggled to find time/motivation for this project during the first half of the semester, but was able to focus more during the second. Combining the latter part (GPU analysis) with my 15-418 final project helped make time.
 - 15-418: Parallel Computer Architecture and Programming
-    - Teaches some interesting and useful content. The second assignment on writing a CUDA circle rasterizer was pretty cool.
-    - I don't think the class was run very well this semester - the other projects were a bit lackluster (and easy) and the course staff weren't very attentive.
-    - Spent more time on architecture (cache coherency, interconnections, heterogeneity) than I would have preferred, but those parts were still reasonably interesting. I enjoyed the parts on parallel programming models, ILP, GPUs, synchronization, lock free code, etc. 
-    - I would recommend this class to people who want to take exactly one systems elective, as understanding how to achieve high performance through parallelism is quite broadly useful. I think it's also useful as a part of the systems concentration, but not vital, as the content could be learned on-demand. OS covers low-level concurrent programming in far more depth. 
+    - Teaches a lot of interesting and useful content. The second assignment on writing a CUDA circle rasterizer was pretty cool.
+    - I don't think the class was run very well this semester - the other projects were a bit easy/lackluster and the course staff weren't very attentive.
+    - The syllabus spent more time on architecture (e.g. cache coherency, interconnections, heterogeneity) than I would have preferred, but those parts were still reasonably interesting. I enjoyed the parts on parallel programming models, ILP, GPUs, synchronization, lock free code, etc. 
+    - I would recommend the class to people who want to take exactly one systems elective, as understanding how to achieve high performance through parallelism is broadly useful. I think it's also a good topic as a part of the systems concentration, but not vital, as the content could be learned on-demand. 15-410 covers low-level concurrency in far more depth. 
 - 15-464: Technical Animation
-    - Very cool content. Lectures trace the history of research in animation.
-    - I learned a lot more about simulation, which was the main reason I took the class. Some lectures were a bit boring, though.
-    - Assignments include two small projects and a final project, which all provide good opportunities to explore topics of interest. I implemented various IK algorithms for the first, mass-spring cloth for the second, and position based fluid simulation/rendering for the final. I added each of these to Scotty3D, so I'm planning on merging them into the main codebase as additional animation tasks.
+    - Very cool content. The lectures trace the history of research in animation (some were a bit boring, though).
+    - I learned a lot about simulation, which was the main reason I took the class.
+    - Assignments include two small projects and a final project, all of which provide opportunities to explore topics of interest. I implemented various inverse kinematic algorithms for the first, mass-spring cloth for the second, and position based fluid simulation &amp; rendering for the final. I added each of these features to Scotty3D.
     - Students write a [lecture blog](https://thenumbat.github.io/15464-s21/).
 - 15-468: Physics-Based Rendering
-    - Quite enjoyed this class; learned a lot after the first 1/3rd, which was mostly 462 review. 
-    - Ioannis (call him Yannis) is a good lecturer and does really cool research. 
-    - Programming assignments were too short, but some more advanced ones will be added next time >:)
-    - Homework effectively emphasized fully understanding the mathematical underpinnings.
+    - I quite enjoyed this class and learned a lot after the first 1/3rd (which was mostly 462 review). 
+    - Ioannis (Yannis) is a good lecturer and does really cool research. 
+    - Programming assignments were too short, but some more advanced ones will be added in later years.
+    - Homework effectively emphasized fully understanding each topic's mathematical underpinnings.
     - The reading group was quite interesting and gave a window into contemporary rendering research.
-    - Final project was a good opportunity to explore an interesting advanced topic. I implemented a real-time RTX path tracer, which produced some great results. I'd like to do more projects in this area - BDPT, (PSS) (M)MLT, specular NEE, volumetric/spectral/polarized/time of flight rendering, and differentiable rendering were all intriguing.
+    - The final project was a good opportunity to explore an interesting advanced topic. I implemented a real-time RTX path tracer, which produced some great results. I'd like to do more projects in this area - BDPT, (PSS) (M)MLT, specular NEE, volumetric/spectral/polarized/time of flight rendering, and differentiable rendering were all intriguing.
     - This was the first time a rendering class has been offered at CMU in over 15 years, so it wasn't fully polished, but I thought it was run well.
 - 33-120: Science and Science Fiction
-    - Similar to experimental physics (same professor).
-    - Easy and occasionally fun. I like sci-fi.
+    - Similar to experimental physics, since I had same professor for both courses.
+    - Easy and occasionally fun. I enjoy sci-fi.
 
 **Other:** geometry collective/graphics lab meetings. A period of severe personal issues (resolved).
 
-**Workload:** light for the first 2/3rds, heavy for the last 1/3rd - all four 15- classes have final projects.
+**Workload:** light for the first 2/3rds, heavy for the last 1/3rd - all four 15- classes had final projects.
 
-**Notes:** I finally got to take classes purely in my area(s) of interest, so I enjoyed this semester more than others. I overdid it a bit with 3.5 final projects at once (plus TAing)&mdash;I wasn't able to focus on each enough to produce the best project ever. But, I still did well and am reasonably happy with the results. This summer I'll be writing some blog posts covering the interesting parts of fluid sim / RTX path tracing / Vulkan and BVHs. Also got extremely good TA feedback again.
+**Notes:** I finally got to take classes purely in my area(s) of interest, so I enjoyed this semester more than others. Doing 3.5 final projects at once (plus TAing) was a bit much&mdash;I wasn't able to focus on each enough to produce super amazing results. But, I still did well and am pretty happy with the results. I'll be writing some blog posts covering the interesting parts of fluid sim / RTX path tracing / Vulkan and BVHs. I also got extremely good TA feedback again.
 
 ## Fall 2020
 - TA: 15-462 - Computer Graphics
-    - Put new codebase into production. Created extra work for myself fixing bugs and such, but went quite well overall. Students produced some _way_ cooler results with the new framework!
+    - Put new codebase into production. This created extra work for myself in fixing bugs, but it went quite well overall. Students produced some _way_ cooler results with the new framework!
     - Otherwise same thoughts on TAing as last semester.
 - 15-300: Research and Innovation in Computer Science
     - Learning more about my area of research (graphics and geometry processing) was great!
-    - Basically a gen ed class (fulfils technical writing requirement), so was a drag at times.
-    - Set up research project with geometry collective for next semester.
-    - Wrote/presented some pretty good technical write-ups.
+    - More of a gen-ed class (it fulfils the technical writing requirement), and some parts were boring.
+    - Set up a research project with the Geometry Collective for next semester.
+    - Wrote and presented some pretty good technical write-ups.
 - ☆ 15-411: Compiler Design
-    - The other infamous (workload) systems class. My experience isn't particularly representative, but I found it _far_ easier and less stressful than OS. Unlike OS, you're given thousands of test cases, and if your compiler passes all of them, it gets 100%. No more combing through code for concurrency mistakes for days on end.
+    - Compilers is the other infamous-workload systems class. My experience is maybe not representative, but I found it _far_ easier and less stressful than OS. Unlike OS, you're given thousands of test cases, and if your compiler passes all of them, it gets full credit. No more combing through code for concurrency mistakes for days on end.
     - Interesting content, although the lectures tended to be more abstract and advanced than was required to implement the projects. 
-    - Projects require building up a decent sized codebase (ours is ~7k lines) of your own code over the semester, which is good for learning to technically manage a significant project. You pick the language - I learned Rust for this class, which turned out to be interesting and useful.
+    - Projects require building up a decent sized codebase from scratch over the semester, which is good for learning to technically manage a significant project. You can choose your implementation language: I learned Rust for this class, which turned out to be interesting and useful.
     - As with OS, you need to be able to work well with your partner. 
 - 15-451: Algorithm Design and Analysis
-    - I wish I could say this was a great extension of 15-210/15-251, but it really wasn't. Some of the topics were interesting to me, such as computational geometry, but others were either review or too theoretical to fully understand without dedicating more time than they were worth to me.
-    - The professors (Miller/Sutner) were a bit out of touch, as they typically teach grad theory classes and CDM, respectively.
-    - Had some programming homeworks in the style of competitive programming, which were pretty cool problems.
+    - I wish I could say this was a great extension of 15-210/15-251, but it really wasn't. Some of the topics were interesting to me (e.g. computational geometry), but others were either review from previous courses or not relevant to my interests.
+    - The professors (Gary Miller + Klaus Sutner) were a bit out of touch, as they typically teach grad-level classes.
+    - Had some programming homeworks in the style of competitive programming, which were cool problems.
     - Class midterm average - 50% (lol). Substantial curve at the end.
 - 21-355: Principles of Real Analysis I
-    - Was less interesting than I had hoped, but still useful for formalizing my thinking about basic continuous math. Also serves as a pre-requisite for all upper-level continuous math courses.
-    - Not too much work in of itself, but it pushed my workload from being often stressful to being basically always stressful, so I kind of regret taking it. I was originally taking it to complete the math minor, but I've now decided to do the new graphics concentration instead of the minor.
+    - Was less interesting than I had hoped, but still useful for formalizing my thinking about basic continuous math. The course serves as a pre-requisite for all upper-level continuous math courses.
+    - Not too much work in of itself, but it pushed my workload from being often stressful to being basically always stressful, so I kind of regret taking it. I was originally taking it to complete the math minor, but I've now decided to do the new graphics concentration instead.
 - 60-125: Introduction to 3D Animation
-    - Very cool class and pretty fun! You learn each step of the 3D animation pipeline (mostly for film, but also games) by doing it yourself. You assemble everything you've built up over the semester into a final animation.
-    - A surprising amount of work. Modelling is hard. Rigging is hard. Animation is hard. Everything is hard. I wish I had more time to dedicate to it in order to make more impressive final piece, but I still learned all the content.
+    - Cool class and pretty fun! You learn each step of the 3D animation pipeline (mostly for film, but also games) by doing it yourself. You assemble everything you've built up over the semester into a final animation.
+    - A surprising amount of work&mdash;every step is quite involved. I wish I had more time available to work on the final piece, but I still learned all the content.
     - Good to experience the art side of computer graphics.
 
 **Other:** Started working with the [Geometry Collective](http://geometry.cs.cmu.edu/).
 
-**Workload:** mostly death
+**Workload:** too much 
 
-**Notes:** much harder to stay motivated with online classes this semester. I probably shouldn't have taken this many classes, plus TAing, but I did end up doing well in all of them. Got extremely good TA feedback. Did many things last minute or late in the latter half of the semester.
+**Notes:** It was much harder to stay motivated in online classes outside of my preferred areas&mdash;did many things last minute or late in the latter half of the semester. I probably should have taken fewer classes, but I did end up doing well in all of them. I also got extremely good TA feedback. 
 
 ## Summer 2020
 - Apple: GPU Software Intern
@@ -111,111 +110,111 @@ Inspired by [these](https://wanshenl.me/courses/reviews/) [pages](http://weihang
 
 ## Spring 2020
 - ☆ TA: 15-462 - Computer Graphics
-    - See bottom; general advice regarding TAing (TLDR: would recommend).
-    - Working with students at OH can be fun, although it can be very hard to pinpoint issues in their code.
-    - Over winter break I started working on re-writing the course codebase to be much cleaner, faster, and less confusing. I hope to deploy it fall 2020. Support for this project has been very encouraging, and being able to have this much influence over the course is surprising.
+    - See general advice regarding TAing below (recommended).
+    - Working with students at office hours is often fun, though debugging their code can be difficult.
+    - Over the 2019 winter break, I started working on re-writing the course codebase to be much faster, cleaner, and less confusing. I hope to deploy it fall 2020 (now deployed!). Support for the project was very encouraging, although I did not really receive any guidance. Being able to have that much influence over the course on my own was surprising&mdash;it's not the norm for larger core courses with more formalized processes. 
 - ☆ 15-259: Probability and Computing
-    - Very well run, in-depth, and fast-paced. Highly recommended over the other probability options unless you want pure math, in which case you should take 21-325 or a measure theory course.
+    - Very well run, in-depth, and fast-paced. For CS majors, I highly recommend it over the other probability options.
     - Includes CS applications of probability such as randomized algorithms, performance modeling, and Markov chains, which are all relevant to many areas of CS.
     - Mor is great. She is experienced, enthusiastic, and cares about student success.
     - Moderate workload: one problem set every week. Exams are pretty easy.
 - ☆ 15-410: Operating System Design and Implementation
-    - Infamous for being the highest straight workload class in CS. It really is a ton of work, but not _quite_ as much as people say.
-    - The staff will not make design decisions for you or debug your code&mdash;you must learn to design, test, evaluate, and debug a substantial low-level project, from scratch, yourself.
+    - Infamous for being the highest workload class in CS. It really is a **lot** of work, but people do exaggerate somewhat.
+    - The staff will not make design decisions for you or debug your code&mdash;you must learn to design, test, evaluate, and debug a complex low-level project, from scratch, yourself.
     - Much of the work is debugging&mdash;if you're not yet an effective debugger, this course will make you one.
+    - The midterm/final were difficult and stressful, and I don't think they should have existed. The grading scheme was also very opaque...
     - You need to be able to work well with your partner. Group work issues are common.
-    - The midterm/final were difficult and stressful, and I don't think they should exist. The grading scheme is very opaque...the final gave me the lowest grade I've ever gotten, but somehow I still got an A in the class.
 - ☆ 15-458: Discrete Differential Geometry
-    - More of a math class than a CS class, but the CS portion (implementing results &amp; algorithms on real meshes) makes results tangible and very rewarding.
-    - Probably my favorite math class ever, highly recommended if you are into geometry at all.
+    - More of a math class than a CS class, but the applications (implementing algorithms on real meshes) made results tangible and very rewarding.
+    - Overall my favorite math class ever&mdash;I highly recommend it if you have any interest in geometry.
     - Keenan is great - in this class especially, his slides, diagrams, and animations are very elegant. They're used to teach this content all over the world.
     - Light workload: one moderate problem set + one short programming assignment every 2 weeks. [2021 update: apparently the problem sets are a lot more work now.]
 
 **Workload:** moderate to heavy depending on when an OS project was due.
 
-**Notes:** everything this semester has a star&mdash;all are recommended. Coronavirus arriving midway through the semester made everything go a bit crazy, but PnC &amp; DDG finished more or less normally, and, while OS changes were mostly bungled (the majority of our course grade was unknown after the final grading deadline...), kernels got completed and end-of-semester work was somewhat reduced. I didn't really feel that OS deserved its reputation as _the_ systems class to take, as I found a good portion of its difficulty to be incidental and not contribute to learning. Even so, OS will still teach you a lot about low level design, debugging, and _especially_ concurrency, so it's worth taking if you want a systems concentration. Otherwise, eh...there are probably better uses of your time. Also note that OS is not recommended as a first systems elective&mdash;especially as a sophomore&mdash;and I'd agree with that unless one found 15-213 easy.
+**Notes:** everything this semester has a star&mdash;all are recommended. Coronavirus arriving midway through the semester caused much turmoil, but PnC &amp; DDG finished more or less normally. While OS changes were mostly bungled&mdash;the majority of our course grade was unknown after the final grading deadline&mdash;kernels got completed and end-of-semester work was somewhat reduced. After taking it, I didn't feel that OS deserved its reputation as _the_ systems class to take, as I found a good portion of its difficulty to be incidental and not really contribute to learning (although I may also be biased from a poor group work experience). Even so, OS does teach one a lot about low level design, debugging, and _especially_ concurrency, so it's worth taking if you want a systems concentration. Otherwise, eh...there are likely better uses of your time. Finally, note that OS is not recommended as a first systems elective&mdash;especially as a sophomore&mdash;and I'd agree with that unless one found 15-213 easy.
 
 ## Fall 2019
 - 15-210: Parallel and Sequential Data Structures and Algorithms
-    - Algorithms are cool, and you do a lot of problem solving with them. Another solid cs theory class, but not as special as 15-251. 
-    - Also taught in a functional language; also not super hard if you grok the functional style.
-    - I felt like there was less emphasis on parallelism than the name might suggest - this just meant that you analyze the span as well as the work of each algorithm.
+    - Algorithms are cool, and you do a lot of problem solving with them. This class was another solid theory offering, but was not as special as 15-251. 
+    - As with 15-150, the course is taught in SML, and is similarly not super difficult for those who grok the functional style.
+    - There was less emphasis on parallelism than the name might suggest&mdash;this just meant that you analyze the span as well as the work of each algorithm.
 - 15-213: Introduction to Computer Systems
-    - Gigantic class and hence hard to run efficiently, but covers essential systems topics very well. Should probably be taken by anyone going into software engineering, even if not systems-oriented.
-    - I was already familiar with most of the topics (as well as programming projects in c from scratch), so it didn't take me much time.
+    - Gigantic class and hence hard to run efficiently, but covers essential systems topics very well. Should be taken by anyone going into software engineering, even if not systems-oriented.
+    - I was already familiar with most of the topics (as well as programming in C from scratch), so it didn't take up much time.
 - ☆ 15-462: Computer Graphics
     - Deep but accessible lectures, rewarding and complex projects. Good introduction to many sub-fields within graphics.
-    - Unfortunately almost totally lacks real-time graphics.
-    - The codebase _used_ to be a mess, but I have fixed this :)
-    - Keenan is great. Nancy is also cool, but tends to give less engaging lectures.
+    - Unfortunately almost totally lacks real-time graphics&mdash;the only project that hits on these topics is a software SVG rasterizer.
+    - The codebase was a mess&mdash;but I have fixed this.
+    - Keenan Crane is excellent. Nancy Pollard is also great, but tends to give less engaging lectures.
 - 15-295: Competition Programming and Problem Solving
     - Basically a club rather than a class (3 hours a week).
-    - Doesn't teach much content - you just solve problems.
-    - I didn't have any experience and wasn't extraordinarily good at it, but with a 15-210 level of algorithms knowledge I was able to do enough problems for an A without putting in much time outside of class.
+    - Doesn't teach much content - you just solve problems. [2021 update: there is now 15-195, which teaches more content.]
+    - I didn't have any competitive programming experience (and wasn't extraordinarily good at it), but with a 15-210 level of algorithms knowledge I was able to get by without putting in much time outside of class.
 - 33-104: Experimental Physics
-    - Chill class, but morning lecture was unfortunate.
-    - Teaches laboratory skills but the physics is quite basic.
-    - Minimal work outside of class.
+    - Teaches laboratory skills, but the physics content is quite basic.
+    - Minimal homework if you finish the lab tasks during class. 
 
 **Workload:** moderate to heavy depending on how many due dates coincided
 
-**Notes:** The freshman advisor wouldn't let me register for graphics without the pre-requisite (15-213), even with instructor permission, but I got into it anyway by talking to the assistant dean (Tom). Moving into an apartment was great.
+**Notes:** The freshman advisor wouldn't let me register for graphics without the pre-requisite (15-213), even with instructor permission, but I got into it anyway by talking to Tom Cortina (the assistant dean). Moving into an off campus apartment made everything significantly better&mdash;from then on I always slept for 8-9 hours.
 
 ## Summer 2019
 - NVIDIA: 3D Graphics Software Intern
-    - I talked to their recruiters at one of the career fairs, but I don't think that turned into anything. I just applied online and interviewed for the position.
+    - I had originally spoken with NVIDIA's recruiters at one of the CMU career fairs, but I don't think that turned into anything. For this position, I just applied and interviewed online.
     - This was the only internship offer I received, which was unusual because NVIDIA mostly hires juniors and sophomores.
-    - The position turned out to be kind of boring for me; I got to work on some interesting GPU performance metrics, but it alternated between being too much high level build-service-benchmark-gluing and too much low level hardware stuff, as opposed to working on actual graphics software.
-    - Two particularly memorable parts were touring their silicon failure analysis lab and visiting the house of Jensen Huang.
+    - The actual job turned out to be rather boring for me: I got to work on some interesting GPU performance metrics, but it alternated between simple build-service-benchmark-plumbing and hardware work that I didn't have much experience with.
+    - The most memorable parts were touring NVIDIA's silicon failure analysis lab and the annual intern event at the house of Jensen Huang.
 
 ## Spring 2019
 - 15-150: Principles of Functional Programming
-    - I think everyone should have to take at least one class in a functional language, and this is a great introduction.
-    - Not super hard if you grok the functional style.
-    - The grading was pedantic and often wrong.
+    - I think everyone should have to take at least one class in a functional language, and this was a great introduction.
+    - Not super hard if you quickly grok functional reasoning.
+    - Many assignments involved proofs for which grading was unnecessarily pedantic and occasionally incorrect.
 - ☆ 15-251: Great Theoretical Ideas in Computer Science
-    - Very interesting overview of many topics in cs theory. Enough depth to legitimately understand and apply the topics to other areas, but not so much as to make you hate the less interesting parts.
-    - I didn't like the weekly homework writing session; it felt like a test every week. I would have preferred to have time to write-up the problems more formally, which I didn't do for about half the weeks.
-    - Past the solo problems, the homeworks were usually very difficult.
-    - You need to find a good group. 
+    - Very interesting overview of many topics in CS theory. Enough depth to legitimately understand and apply the topics to other areas, but not so much as to make you hate the less interesting parts.
+    - I didn't enjoy the weekly homework writing session: it felt like a test every week. I would have preferred the opportunity to write-up the problems on my own, which I didn't do for about half the weeks. However, I did find writing sessions far preferable to the more traditional exams.
+    - Beyond the solo problems, the homeworks were usually very difficult. I have heard this semester was unusually hard, though.
+    - The hard problems are meant to be worked on in groups&mdash;prioritize finding a good one. 
 - 21-268: Multidimensional Calculus
-    - Objectively a good class, but early morning and pretty boring lecture.
-    - It was a more rigorous treatment than what I knew, but I should have taken 21-269 (Vector Analysis).
+    - This is a good class overall, but for me was early morning and pretty boring.
+    - It gave a more rigorous treatment than what I already knew, but it was still too much review. I should have taken 21-269 (Vector Analysis).
 - 80-135: Introduction to Political Philosophy
     - Highly recommended if it fulfils a gen-ed requirement you need.
-    - A lot of reading but light writing.
-    - Gray is very interesting and engaging.
+    - A lot of (interesting) reading but light writing.
+    - Derek Gray is engaging and enthusiastic. Philosophy TAs are also interesting.
 - 80-150: Nature of Reason
     - Pretty useless, don't take this. Minimal work, though.
 
-**Workload:** probably moderate, but often felt heavy due to living situation stress &amp; not sleeping enough
+**Workload:** overall moderate, but was often increased due to my living situation cutting into sleep. 
 
-**Notes:** I really hated living in a dorm...
+**Notes:** I hated living in a dorm.
 
 ## Fall 2018
 - 15-122: Principles of Imperative Computation
-    - An important class to take, but was not useful for me. Should have skipped.
+    - An important class to take, but was almost entirely review for me. Should have skipped.
     - Practices like defensive programming with contracts and invariants are valuable for all future coding.
 - ☆ 15-151: Mathematical Foundations of Computer Science
-    - Very good class, well-run and Mackey is a great lecturer/leader.
-    - Necessary and sufficient preparation for cs theory, algorithms, and proof-based math.
-    - Pretty straightforward if you have competitive math background (I didn't, but had taken a CS math/logic class, so it wasn't too bad). Difficult otherwise.
+    - Very well run: Mackey is a great lecturer/leader.
+    - Necessary and sufficient preparation for CS theory, algorithms, and proof-based math.
+    - Pretty straightforward if you have background in competitive math, but difficult otherwise. I never did competitive math, but had already taken a logic class, so it wasn't bad.
 - 21-241: Matrices and Linear Transformations
-    - This semester had a SCS specific section that included short programming assignments implementing lin alg results in Python. I don't think this added much.
-    - Also had some applied topics like SVD and a final project on spectral clustering, which was interesting and new.
-    - Overall should have taken 21-242 (Matrix Theory).
+    - This semester had a SCS specific section that included short programming assignments implementing results in Python. I don't think this added much.
+    - Included some advanced(ish) topics, including SVD and a final project on spectral clustering. Those parts were interesting and new.
+    - Overall was too much review for me: I should have taken 21-242 (Matrix Theory).
 - 76-102: Gothic Literature
-    - Pretty standard lit class. Topics vary per semester.
+    - Pretty standard literature class. Topics vary depending on the professor and semester.
     - Good alternative to 76-101 if you enjoy reading & discussion.
 - 85-102: Introduction to Psychology
-    - Secretly the hardest class at CMU. Minimal work, though.
+    - Exam grading made it secretly the hardest class at CMU (consider my GPA...).
+    - Minimal work outside of class, though.
 
 **Workload:** light
 
-**Notes:** I'm still mad that I didn't get transfer credit for 21-241, 21-259, or 15-122...I really did not need to re-take these. Thanks, Jacobo. I also regret not taking the honors freshman math track, which is 21-242 and 21-269. I wasn't selected for 21-242 based on the freshman math maturity survey, but I am pretty sure I could have handled it. In a perfect world, I probably would have taken 15-150, 15-151, and 21-242 first semester, 15-213, 15-210, and 21-269 second semester, and 15-251 + electives third semester.
+**Notes:** I'm still angry that my freshman advisor denied transfer credit for 21-241, 21-259/268, and 15-122...I really did not need to re-take them. For 15-122 in particular, my course syllabi included all of the content, but my request was still denied due to one of the courses having been offered online (despite being a normal university course! Funny how their stance on online courses changed in 2020...). I also regret not taking the honors freshman math track (21-242/21-269). I wasn't selected for 21-242 based on the freshman math maturity survey, but I think I would have gotten a lot more out of it. In a perfect world, I probably would have taken 15-150, 15-151, and 21-242 first semester, 15-213, 15-210, and 21-269 second semester, and 15-251 + electives third semester.
 
-## Advice for Freshmen
-- Doing research freshman year isn't a great idea - you can't do that much without completing the CS core, even if a professor gives you a real project. First year, I would instead recommend focusing on doing excellently in/doing more of the core. Over the following summer, however, getting into research is a great idea if you don't want/get an internship. (FYI - freshman internships are unusual.)
-- Many people recommend taking fewer classes to make time for other cool things, so I'll reiterate that, especially if you want to do research. However, to get into these 'other things,' I would also encourage trying to stand out in classes whose content you are particularly interested in, doing projects, becoming a TA, or any other activities that build a relationship with faculty, even if it means putting in a little less effort in other areas. [This great presentation](http://graphics.stanford.edu/~kayvonf/misc/do_grades_matter.pdf) goes into what I'm talking about here.
-- TAing is a rewarding experience: you will deepen your understanding of your subject, teach others about what you enjoy, and can even affect course development by designing assignments and tests, etc. I will note that the latter is more difficult to do in core courses, which tend to be larger and more set in stone. You also get paid peanuts.
+## Some Advice for Freshmen
+- Doing research freshman year isn't the best idea: even if a professor gives you a real project, your knowledge will be pretty limited until you're able to take CS electives. I would instead recommend focusing on doing excellently in/more of the core courses. Over the following summer, however, getting into research is a great idea if you don't want/get an internship, since freshman internships are unusual.
+- Many people recommend taking fewer classes to make time for other cool things, so I'll reiterate that, especially if you are interested in research (but not implying that is the only other option). However, to get into these 'other things,' I would encourage trying to stand out in classes whose content you are particularly interested in, doing outside projects, becoming a TA, or any other activities that can build a relationship with faculty&mdash;even if it means putting in a little less effort in other areas. This [presentation](http://graphics.stanford.edu/~kayvonf/misc/do_grades_matter.pdf) from CMU (now Stanford) professor Kayvon Fatahalian describes this in more detail.
+- TAing is a rewarding experience: you can deepen your understanding of your subject, teach others about what you enjoy, and can even personally influence course/curriculum development. I will note that the latter is more difficult to do in core courses, which tend to be larger and more set in stone. Unfortunately, you do not get paid very much&mdash;it's definitely not worth it monetarily, unless it gets you a job.
 - Don't expect transfer credit for other university courses...
