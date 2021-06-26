@@ -174,7 +174,7 @@ Fully built out, along with some utility functions such as enum-stringification 
 ```c++
 ImGui::EditAny("cam", &camera);
 ```
-<div style="text-align: center;"><img src="../assets/ui.png"></div>
+<div style="text-align: center;"><img src="/assets/reflection/ui.png"></div>
 
 ## Metaprogramming
 
@@ -203,7 +203,7 @@ clang_visitChildren(cursor,
 ```
 
 Once a list of types is built from the AST, code is output to a file that is included by the game. The build system typically invokes the meta-program right before compiling the source.  
-<em>([Full Output](../assets/meta_types.cpp))</em>
+<em>([Full Output](/assets/reflection/meta_types.cpp))</em>
 
 ```c++
 // example output for the "any" struct

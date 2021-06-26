@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Voxel Meshing in Exile
+title: Voxel Rendering in Exile
 ---
 
 No, [Exile](https://github.com/TheNumbat/exile) is not technically a "voxel" engine. A real voxel engine unifies objects, textures, and more into colored voxel data, rendering them via raymarching/[marching cubes](https://en.wikipedia.org/wiki/Marching_cubes)/[dual contouring](https://upvoid.com/devblog/2013/05/terrain-engine-part-1-dual-contouring/)/etc., and can target realism. Instead, Exile is a "voxel" engine in that it's a traditional 3D engine that happens to focus on representing and drawing textured cubes (like Minecraft and related games). Some have worked around this linguistic confusion by christening the technique ["Swedish cubes"](https://yave.handmade.network/), but for the purposes of this post, please assume that voxels imply textured cubes.
@@ -17,7 +17,7 @@ Performance: Many optimizations (lighting, meshing, AO, culling, pathing, etc.) 
 
 Aesthetics: Subjectively, voxel worlds can look better from farther distances than traditional mesh-based worlds, all while being more compact.
 
-<div style="text-align: center;"><img src="../assets/minecraft-shaders.png"></div>
+<div style="text-align: center;"><img src="/assets/voxel-render/minecraft-shaders.png"></div>
 
 Of course, voxels are not without some disadvantages:
 - Not for realism, and can look unnatural when mixed with non-voxel elements.
@@ -57,7 +57,7 @@ The first step in the voxel rendering pipeline is creating an optimized, render-
 
 <em>([Implementation](https://github.com/TheNumbat/exile/blob/master/src/world.cpp#L735))</em>
 
-<div style="text-align: center;"><img src="../assets/mesh.png"><p><em>Result of Greedy Meshing</em></p></div>
+<div style="text-align: center;"><img src="/assets/voxel-render/mesh.png"><p><em>Result of Greedy Meshing</em></p></div>
 
 ## Ambient Occlusion
 
@@ -65,7 +65,7 @@ Even without basic lighting, [ambient occlusion](https://en.wikipedia.org/wiki/A
 
 There are four levels of occlusion possible for any vertex in the world, as shown here:
 
-<div style="text-align: center;"><img src="../assets/voxelao.png"><p><em>Credit <a href="https://0fps.net/2013/07/03/ambient-occlusion-for-minecraft-like-worlds/">0fps.net</a></em></p></div>
+<div style="text-align: center;"><img src="/assets/voxel-render/voxelao.png"><p><em>Credit <a href="https://0fps.net/2013/07/03/ambient-occlusion-for-minecraft-like-worlds/">0fps.net</a></em></p></div>
 
 Notice that the occlusion value of the vertex is only dependent on the opacity of the three upper adjacent blocks (if all are filled, occlusion is always 0). Hence, for any vertex in the world, one can find which of the four blocks above the vertex is air, then calculate occlusion based on the other three (two sides and the corner). If both sides are filled, the point is maximally occluded, but otherwise, the occlusion is simply increased for each filled block.
 
@@ -84,7 +84,7 @@ However, simply assigning each vertex an occlusion value and interpolating betwe
 
 For more detail, refer to [this article](https://0fps.net/2013/07/03/ambient-occlusion-for-minecraft-like-worlds/).
 
-<div style="text-align: center;"><img src="../assets/ao.png"><p><em>With and without ambient occlusion (no other lighting)</em></p></div>
+<div style="text-align: center;"><img src="/assets/voxel-render/ao.png"><p><em>With and without ambient occlusion (no other lighting)</em></p></div>
 
 ## Vertex Format
 
