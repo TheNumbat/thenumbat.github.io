@@ -23,12 +23,12 @@ footer-links:
   flickr:
   github: TheNumbat
   instagram:
-  linkedin: thenumbat
+  linkedin: 
   pinterest:
   rss: anything # just type anything here for a working RSS icon
   twitter: 
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: channel/UCI1MRQKe-WYCmHJ5J3xVyvA # channel/<your_long_string> or user/<user-name>
+  youtube: # channel/UCI1MRQKe-WYCmHJ5J3xVyvA
   googleplus: # anything in your profile username that comes after plus.google.com/
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts

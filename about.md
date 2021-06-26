@@ -8,8 +8,8 @@ I'm currently a rising senior at Carnegie Mellon University's School of Computer
 
 [My CV](assets/mslater_cv.pdf)
 
-[My Projects](projects)
+[My Projects](/projects)
 
-[My Thoughts on CMU Courses](cmu)
+[My Thoughts on CMU Courses](/cmu)
 
-[Email Me](mailto:numbat@cmu.edu)
+[Contact Me](mailto:numbat@cmu.edu)
