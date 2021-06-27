@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I'm currently a rising senior at Carnegie Mellon University's School of Computer Science. I'm interested in computer graphics, systems, simulations, games, languages, algorithms, and art.  
+I'm currently a rising senior in Carnegie Mellon University's School of Computer Science. I'm interested in computer graphics, systems, simulations, games, languages, algorithms, and art.  
 
 [My CV](/assets/mslater_cv.pdf)
 
