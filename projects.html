@@ -25,6 +25,10 @@ permalink: /projects/
             <span class="read-more-no-link">|</span>
             <a href="{{ post.github }}" class="read-more">View on GitHub</a>
             {% endif %}
+            {% if post.doc %}
+            <span class="read-more-no-link">|</span>
+            <a href="{{ post.doc }}" class="read-more">Read Documentation</a>
+            {% endif %}
           </div>
         </div>
       </div>
