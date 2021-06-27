@@ -252,6 +252,23 @@ nav {
 }
 
 .post {
+
+  .heading {
+    font-family: $helveticaNeue;
+    color: $darkerGray;
+    font-weight: bold;
+
+    // line-height: 1.7;
+    // margin: 1em 0 15px;
+    padding: 0;
+
+    font-size: 36px;
+
+    @include mobile {
+      line-height: 1.4;
+    }
+  }
+
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
@@ -261,13 +278,31 @@ nav {
     font-style: italic;
   }
 
+  img {
+    width: 95%;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  .column {
+    flex: 50%;
+    padding: 0 4px;
+  }
+
   .comments {
     margin-top: 10px;
   }
 
   .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
+    font-size: 20px;
+  }
+
+  .read-more-no-link {
+    font-size: 20px;
   }
 }
 

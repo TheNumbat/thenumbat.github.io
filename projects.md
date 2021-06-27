@@ -3,26 +3,71 @@ layout: default
 permalink: /projects/
 ---
 
+<h1>Active Projects</h1>
 <div class="projects">
   {% for post in site.categories.projects %}
   	{% unless post.draft %}
+    {% if post.active %}
     <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
       <div class="row">
         <div class="column">
-          <img src="{{ site.baseurl }}/assets/projects/{{ post.image }}">
+          <a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}/assets/projects/{{ post.image }}"></a>
         </div>
         <div class="column">
+          <a href="{{ site.baseurl }}{{ post.url }}" class="heading">{{ post.title }}</a>
           <div class="entry">
-          {{ post.excerpt }}
+            {{ post.excerpt }}
+          
+            <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+            
+            {% if post.github %}
+            <span class="read-more-no-link">|</span>
+            <a href="{{ post.github }}" class="read-more">View on GitHub</a>
+            {% endif %}
           </div>
         </div>
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <br/>
     </article>
+    {% endif %}
+    {% endunless %}
+{% endfor %}
+</div>
+<h1>Inactive Projects</h1>
+<div class="projects">
+  {% for post in site.categories.projects %}
+  	{% unless post.draft %}
+    {% unless post.active %}
+    <article class="post">
+
+      <div class="row">
+        <div class="column">
+          <a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}/assets/projects/{{ post.image }}"></a>
+        </div>
+        <div class="column">
+          <a href="{{ site.baseurl }}{{ post.url }}" class="heading">{{ post.title }}</a>
+          <div class="entry">
+            {{ post.excerpt }}
+          
+            <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+            
+            {% if post.github %}
+            <span class="read-more-no-link">|</span>
+            <a href="{{ post.github }}" class="read-more">View on GitHub</a>
+            {% endif %}
+            {% if post.website %}
+            <span class="read-more-no-link">|</span>
+            <a href="{{ post.website }}" class="read-more">Website</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <br/>
+    </article>
+    {% endunless %}
     {% endunless %}
   {% endfor %}
 </div>

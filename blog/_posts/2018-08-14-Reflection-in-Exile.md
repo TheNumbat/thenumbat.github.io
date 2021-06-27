@@ -5,6 +5,8 @@ title: Reflection in Exile
 
 [Reflection](https://en.wikipedia.org/wiki/Reflection_(computer_programming)), specifically type introspection, is an immensely useful feature provided by many modern languages. By enabling a way to inspect the properties of types&mdash;for example, the types of the members of a data structure&mdash;introspection allows one to write much more general and effective generic code, enforce interfaces/contracts, and more. 
 
+<!--end_excerpt-->
+
 Though most obviously found in dynamic languages, introspection is just as powerful in compiled, statically typed languages such as [Go](https://blog.golang.org/laws-of-reflection) and [JAI](https://www.youtube.com/watch?v=JoNkttD_MUs). Unfortunately, C++ does not support run-time reflection as a language feature, and template-based compile-time reflection is neither standardized, elegant, nor robust. Standards proposals have been put forward to add reflection features, but an implementation is still rather far off. Further, [libraries](https://github.com/rttrorg/rttr) aiming to provide run-time reflection typically require laborious setup for each type you wish to make reflect-able. 
 
 For [exile](https://github.com/TheNumbat/exile), I wanted to use run-time reflection to power truly type-agnostic serialization and UI, but I did not want the code overhead of specifying meta-info for all of my types. Inspired by JAI's model, I chose to implement a library-level reflection system via meta-programming. Combined with exile's [hot reloading system](https://thenumbat.github.io/Hot-Reloading-in-Exile/), I find the environment very conducive to iteration and prototyping&mdash;even in a very C-like dialect of C++.
