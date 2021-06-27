@@ -257,16 +257,7 @@ nav {
     font-family: $helveticaNeue;
     color: $darkerGray;
     font-weight: bold;
-
-    // line-height: 1.7;
-    // margin: 1em 0 15px;
-    padding: 0;
-
     font-size: 36px;
-
-    @include mobile {
-      line-height: 1.4;
-    }
   }
 
   blockquote {
