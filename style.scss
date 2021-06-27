@@ -253,6 +253,10 @@ nav {
 
 .post {
 
+  .thumbnail {
+    width: 95%;
+  }
+
   .heading {
     font-family: $helveticaNeue;
     color: $darkerGray;
@@ -267,10 +271,6 @@ nav {
     color: $gray;
     font-size: 22px;
     font-style: italic;
-  }
-
-  img {
-    width: 95%;
   }
 
   .row {
