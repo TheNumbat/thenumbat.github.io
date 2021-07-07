@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Reflection in Exile
+title: "Exile: Reflection"
+effort: true
 ---
 
 [Reflection](https://en.wikipedia.org/wiki/Reflection_(computer_programming)), specifically type introspection, is an immensely useful feature provided by many modern languages. By enabling a way to inspect the properties of types&mdash;for example, the types of the members of a data structure&mdash;introspection allows one to write much more general and effective generic code, enforce interfaces/contracts, and more. 

@@ -2,19 +2,24 @@
 layout: default
 ---
 
-<div class="posts">
+<h2>Posts</h2>  
+<ul class="posts">
   {% for post in site.categories.blog %}
-  	{% unless post.draft %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-    {% endunless %}
+  {% unless post.draft %}
+  {% if post.effort %}
+  <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a></li>
+  {% else %}
+  <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endif %}
+  {% endunless %}
   {% endfor %}
-</div>
+</ul>
+<h2>About</h2>
+I'm currently a senior at CMU SCS. I'm interested in graphics, systems, simulations, games, languages, algorithms, and art.  
+<ul>
+<li><a href="/assets/mslater_cv.pdf">My CV</a></li>
+<li><a href="/projects">My Projects</a></li>
+<li><a href="https://github.com/TheNumbat/Lists">My Bookmarks</a></li>
+<li><a href="/cmu">My Thoughts on CMU Courses</a></li>
+<li><a href="mailto:numbat@cmu.edu">Contact Me</a></li>
+</ul>
