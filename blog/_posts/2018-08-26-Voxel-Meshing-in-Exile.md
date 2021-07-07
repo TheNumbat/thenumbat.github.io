@@ -15,7 +15,7 @@ Representing a game world with voxels provides several distinct advantages:
 Interactivity: Voxels provide an obvious way for the player to build, edit, and destroy the world however they wish.
 
 Systems: Having a natural world grid allows procedural generation, NPCs, logistic systems, and the like to seamlessly integrate into the environment.
-	
+    
 Performance: Many optimizations (lighting, meshing, AO, culling, pathing, etc.) are available when working with voxel data, resulting in good performance scaling.
 
 Aesthetics: Subjectively, voxel worlds can look better from farther distances than traditional mesh-based worlds, all while being more compact.
@@ -42,15 +42,15 @@ The following describes Exile's general pipeline for going from a flat chunk of 
 In developing Exile, I explored several techniques for rendering voxel data, and have mostly settled on a hybrid mesh-geometry solution.
 1. Instancing
 
-	This technique is the simplest and most obvious: instance a single cube mesh for each block you want to render. This works surprisingly well in the "worst" case, a uniform checkerboard of blocks (meaning all faces must be rendered). However, given the massive overdraw in common cases and lack of flexibility, this technique is not very useful in the end.
+    This technique is the simplest and most obvious: instance a single cube mesh for each block you want to render. This works surprisingly well in the "worst" case, a uniform checkerboard of blocks (meaning all faces must be rendered). However, given the massive overdraw in common cases and lack of flexibility, this technique is not very useful in the end.
 
 2. Geometry shaders
 
-	Using geometry shaders to generate raster data encompasses a variety of options, including [generating entire blocks](http://jojendersie.de/rendering-huge-amounts-of-voxels/) (with up to three faces visible) and [generating triangles based on face data](https://yave.handmade.network/blogs/p/2629-compact_cube_meshes,_and_compact_cube_meshes_in_unity). These techniques tend to be the most space-efficient, but suffer in complexity and geometry shader performance.
+    Using geometry shaders to generate raster data encompasses a variety of options, including [generating entire blocks](http://jojendersie.de/rendering-huge-amounts-of-voxels/) (with up to three faces visible) and [generating triangles based on face data](https://yave.handmade.network/blogs/p/2629-compact_cube_meshes,_and_compact_cube_meshes_in_unity). These techniques tend to be the most space-efficient, but suffer in complexity and geometry shader performance.
 
 3. Meshing
 
-	Meshing also refers to several techniques. The basic idea is to generate a traditional 3D mesh from voxel data. Rendering static meshes is just about the fastest thing a GPU can do, so meshing tends to be the most performant approach&mdash;but can require unacceptable amounts of GPU memory. However, memory limitations may be worked around by using fixed-precision attributes. For example, if all vertices are at integer coodinates within a chunk, the coordinates only need enough bits to cover the size of the chunk&mdash;certainly not a 12-byte ``vec3``. Further, this approach can be combined with geometry shaders to render directly from an optimized mesh of per-face data rather than per-vertex data.
+    Meshing also refers to several techniques. The basic idea is to generate a traditional 3D mesh from voxel data. Rendering static meshes is just about the fastest thing a GPU can do, so meshing tends to be the most performant approach&mdash;but can require unacceptable amounts of GPU memory. However, memory limitations may be worked around by using fixed-precision attributes. For example, if all vertices are at integer coodinates within a chunk, the coordinates only need enough bits to cover the size of the chunk&mdash;certainly not a 12-byte ``vec3``. Further, this approach can be combined with geometry shaders to render directly from an optimized mesh of per-face data rather than per-vertex data.
 
 I found the approach with the highest absolute performance to be meshing, settling on a meshing pipeline that works with compact quads: generate an optimized face mesh for each chunk, then feed the mesh faces (each represented by four compact vertices) through an instanced vertex shader that unpacks the vertices, assembles them into a quad, and passes them along to the fragment shader. 
 
@@ -74,7 +74,7 @@ Notice that the occlusion value of the vertex is only dependent on the opacity o
 
 ```c++
 if(side0 && side1) {
-	return 0;
+    return 0;
 }
 return 3 - side0 - side1 - corner;
 ```
@@ -142,47 +142,52 @@ out vec2 f_uv;
 out vec3 f_n;
 
 struct vert {
-	vec3 pos;
-	vec2 uv;
-	vec4 ao;
-	uint t;
+    vec3 pos;
+    vec2 uv;
+    vec4 ao;
+    uint t;
 };
 
 vec3 unpack_pos(uvec2 i) {
-	return vec3((i.x & x_mask) >> 24, (i.y & y_mask) >> 20, (i.x & z_mask) >> 16) / units_per_voxel;
+    return vec3((i.x & x_mask) >> 24, 
+                (i.y & y_mask) >> 20, 
+                (i.x & z_mask) >> 16) / units_per_voxel;
 }
 
 vert unpack(uvec2 i) {
 
-	vert o;
-	
-	o.pos   = vec3((i.x & x_mask) >> 24, (i.y & y_mask) >> 20, (i.x & z_mask) >> 16) / units_per_voxel;
-	o.uv    = vec2((i.x & u_mask) >> 8, i.x & v_mask) / units_per_voxel;
-	o.t     = (i.y & t_mask) >> 8;
-	o.ao[0] = ao_curve[(i.y & ao0_mask) >> 6];
-	o.ao[1] = ao_curve[(i.y & ao1_mask) >> 4];
-	o.ao[2] = ao_curve[(i.y & ao2_mask) >> 2];
-	o.ao[3] = ao_curve[(i.y & ao3_mask)];
+    vert o;
+    
+    o.pos   = vec3((i.x & x_mask) >> 24, 
+                   (i.y & y_mask) >> 20, 
+                   (i.x & z_mask) >> 16) / units_per_voxel;
+    o.uv    = vec2((i.x & u_mask) >> 8, 
+                   i.x & v_mask) / units_per_voxel;
+    o.t     = (i.y & t_mask) >> 8;
+    o.ao[0] = ao_curve[(i.y & ao0_mask) >> 6];
+    o.ao[1] = ao_curve[(i.y & ao1_mask) >> 4];
+    o.ao[2] = ao_curve[(i.y & ao2_mask) >> 2];
+    o.ao[3] = ao_curve[(i.y & ao3_mask)];
 
-	return o;
+    return o;
 }
 
 void main() {
 
-	uvec2 verts[4] = uvec2[](v0.xy, v0.zw, v1.xy, v1.zw);
+    uvec2 verts[4] = uvec2[](v0.xy, v0.zw, v1.xy, v1.zw);
 
-	vert v = unpack(verts[gl_VertexID]);
+    vert v = unpack(verts[gl_VertexID]);
 
-	vec3 v1 = unpack_pos(verts[0]);
-	vec3 v2 = unpack_pos(verts[1]);
-	vec3 v3 = unpack_pos(verts[2]);
+    vec3 v1 = unpack_pos(verts[0]);
+    vec3 v2 = unpack_pos(verts[1]);
+    vec3 v3 = unpack_pos(verts[2]);
 
-	gl_Position = mvp * vec4(v.pos, 1.0);
-	
-	f_n = cross(v2 - v1, v3 - v1);
-	f_uv = v.uv;
-	f_ao = v.ao;
-	f_t = v.t;
+    gl_Position = mvp * vec4(v.pos, 1.0);
+    
+    f_n = cross(v2 - v1, v3 - v1);
+    f_uv = v.uv;
+    f_ao = v.ao;
+    f_t = v.t;
 }
 ```
 The fragment shader then renders the rasterized results using the u/v/t texture coordinates and ambient occlusion values.

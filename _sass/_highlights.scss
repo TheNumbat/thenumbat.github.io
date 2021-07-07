@@ -10,8 +10,10 @@ pre.highlight {
   overflow: auto;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap');
+
 code {
-  font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+  font-family:'Courier', monospace;
 }
 
 .highlight .c { color: #586E75 } /* Comment */
